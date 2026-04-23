@@ -20,23 +20,6 @@
 
 
 
- <div id="google_translate_element"></div>
-
-    <!-- Initialize Google Translate -->
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
-        }
-    </script>
-
-    <!-- Load Google Translate Script -->
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-
-
-
-
-
 
 
 
@@ -80,10 +63,13 @@
 <script data-wpfc-render="false">var Wpfcll={s:[],osl:0,scroll:false,i:function(){Wpfcll.ss();window.addEventListener('load',function(){window.addEventListener("DOMSubtreeModified",function(e){Wpfcll.osl=Wpfcll.s.length;Wpfcll.ss();if(Wpfcll.s.length > Wpfcll.osl){Wpfcll.ls(false);}},false);Wpfcll.ls(true);});window.addEventListener('scroll',function(){Wpfcll.scroll=true;Wpfcll.ls(false);});window.addEventListener('resize',function(){Wpfcll.scroll=true;Wpfcll.ls(false);});window.addEventListener('click',function(){Wpfcll.scroll=true;Wpfcll.ls(false);});},c:function(e,pageload){var w=document.documentElement.clientHeight || body.clientHeight;var n=0;if(pageload){n=0;}else{n=(w > 800) ? 800:200;n=Wpfcll.scroll ? 800:n;}var er=e.getBoundingClientRect();var t=0;var p=e.parentNode ? e.parentNode:false;if(typeof p.getBoundingClientRect=="undefined"){var pr=false;}else{var pr=p.getBoundingClientRect();}if(er.x==0 && er.y==0){for(var i=0;i < 10;i++){if(p){if(pr.x==0 && pr.y==0){if(p.parentNode){p=p.parentNode;}if(typeof p.getBoundingClientRect=="undefined"){pr=false;}else{pr=p.getBoundingClientRect();}}else{t=pr.top;break;}}};}else{t=er.top;}if(w - t+n > 0){return true;}return false;},r:function(e,pageload){var s=this;var oc,ot;try{oc=e.getAttribute("data-wpfc-original-src");ot=e.getAttribute("data-wpfc-original-srcset");originalsizes=e.getAttribute("data-wpfc-original-sizes");if(s.c(e,pageload)){if(oc || ot){if(e.tagName=="DIV" || e.tagName=="A" || e.tagName=="SPAN"){e.style.backgroundImage="url("+oc+")";e.removeAttribute("data-wpfc-original-src");e.removeAttribute("data-wpfc-original-srcset");e.removeAttribute("onload");}else{if(oc){e.setAttribute('src',oc);}if(ot){e.setAttribute('srcset',ot);}if(originalsizes){e.setAttribute('sizes',originalsizes);}if(e.getAttribute("alt") && e.getAttribute("alt")=="blank"){e.removeAttribute("alt");}e.removeAttribute("data-wpfc-original-src");e.removeAttribute("data-wpfc-original-srcset");e.removeAttribute("data-wpfc-original-sizes");e.removeAttribute("onload");if(e.tagName=="IFRAME"){var y="https://www.youtube.com/embed/";if(navigator.userAgent.match(/\sEdge?\/\d/i)){e.setAttribute('src',e.getAttribute("src").replace(/.+\/templates\/youtube\.html\#/,y));}e.onload=function(){if(typeof window.jQuery !="undefined"){if(jQuery.fn.fitVids){jQuery(e).parent().fitVids({customSelector:"iframe[src]"});}}var s=e.getAttribute("src").match(/templates\/youtube\.html\#(.+)/);if(s){try{var i=e.contentDocument || e.contentWindow;if(i.location.href=="about:blank"){e.setAttribute('src',y+s[1]);}}catch(err){e.setAttribute('src',y+s[1]);}}}}}}else{if(e.tagName=="NOSCRIPT"){if(jQuery(e).attr("data-type")=="wpfc"){e.removeAttribute("data-type");jQuery(e).after(jQuery(e).text());}}}}}catch(error){console.log(error);console.log("==>",e);}},ss:function(){var i=Array.prototype.slice.call(document.getElementsByTagName("img"));var f=Array.prototype.slice.call(document.getElementsByTagName("iframe"));var d=Array.prototype.slice.call(document.getElementsByTagName("div"));var a=Array.prototype.slice.call(document.getElementsByTagName("a"));var s=Array.prototype.slice.call(document.getElementsByTagName("span"));var n=Array.prototype.slice.call(document.getElementsByTagName("noscript"));this.s=i.concat(f).concat(d).concat(a).concat(s).concat(n);},ls:function(pageload){var s=this;[].forEach.call(s.s,function(e,index){s.r(e,pageload);});}};document.addEventListener('DOMContentLoaded',function(){wpfci();});function wpfci(){Wpfcll.i();}</script>
 <style>
 html, body { margin: 0; padding: 0; top: 0 !important; }
-#google_translate_element { display: block; margin: 0; padding: 0; }
 .goog-te-banner-frame.skiptranslate { display: none !important; }
 .skiptranslate > iframe { display: none !important; }
-* { cursor: none !important; }
+
+/* Custom cursor — mouse/trackpad only, never on touch */
+@media (hover: hover) and (pointer: fine) {
+    * { cursor: none !important; }
+}
 .custom-cursor {
     position: fixed;
     top: 0;
@@ -100,6 +86,10 @@ html, body { margin: 0; padding: 0; top: 0 !important; }
     animation: cursorAmoeba 2s infinite ease-in-out;
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.5), 0 0 20px rgba(255, 0, 0, 0.25);
 }
+/* Hide the cursor dot on touch screens */
+@media (hover: none), (pointer: coarse) {
+    .custom-cursor { display: none !important; }
+}
 .custom-cursor.paused {
     transform: translate(-50%, -50%) scale(1.5);
     background: rgba(255, 0, 0, 0.3);
@@ -112,6 +102,77 @@ html, body { margin: 0; padding: 0; top: 0 !important; }
     75%  { border-radius: 30% 70% 60% 40% / 60% 50% 50% 60%; }
     100% { border-radius: 40% 60% 60% 40% / 40% 40% 60% 60%; }
 }
+
+/* ── Custom Language Switcher Bar ── */
+#ot-lang-bar {
+    background: #12122a;
+    padding: 5px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    z-index: 10000;
+}
+#ot-lang-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.16);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    padding: 5px 13px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1;
+}
+#ot-lang-btn:hover { background: rgba(230,57,70,0.25); border-color: #e63946; }
+#ot-lang-btn .ot-globe { color: #e63946; font-size: 13px; }
+#ot-lang-btn .ot-chevron { font-size: 9px; opacity: 0.65; transition: transform 0.2s; }
+#ot-lang-bar.open #ot-lang-btn .ot-chevron { transform: rotate(180deg); }
+#ot-lang-dropdown {
+    display: none;
+    position: absolute;
+    top: calc(100% + 4px);
+    right: 12px;
+    background: #1a1a2e;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    box-shadow: 0 10px 32px rgba(0,0,0,0.5);
+    z-index: 99999;
+    min-width: 190px;
+    max-height: 320px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: #e63946 #12122a;
+}
+#ot-lang-dropdown::-webkit-scrollbar { width: 5px; }
+#ot-lang-dropdown::-webkit-scrollbar-track { background: #12122a; border-radius: 0 10px 10px 0; }
+#ot-lang-dropdown::-webkit-scrollbar-thumb { background: #e63946; border-radius: 4px; }
+#ot-lang-bar.open #ot-lang-dropdown { display: block; }
+#ot-lang-dropdown a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 16px;
+    color: rgba(255,255,255,0.8);
+    font-size: 13px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    text-decoration: none;
+    transition: background 0.15s, color 0.15s;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+#ot-lang-dropdown a:last-child { border-bottom: none; }
+#ot-lang-dropdown a:hover, #ot-lang-dropdown a.ot-active { background: rgba(230,57,70,0.18); color: #fff; }
+#ot-lang-dropdown a .ot-flag { font-size: 17px; line-height: 1; flex-shrink: 0; }
+
+/* Keep raw Google Translate widget invisible but functional */
+#google_translate_element { position: absolute !important; top: -9999px !important; left: -9999px !important; width: 0 !important; height: 0 !important; overflow: hidden !important; visibility: hidden !important; }
 </style>
 </head>
 
@@ -135,6 +196,245 @@ html, body { margin: 0; padding: 0; top: 0 !important; }
 
 <body class="home page-template page-template-elementor_header_footer page page-id-6 wp-custom-logo elementor-default elementor-template-full-width elementor-kit-12 elementor-page elementor-page-6">
 <div class="custom-cursor" id="custom-cursor"></div>
+
+<!-- ── Language Switcher Bar ── -->
+<div id="ot-lang-bar">
+    <button id="ot-lang-btn" aria-label="Select Language">
+        <i class="fas fa-globe ot-globe"></i>
+        <span id="ot-lang-current">EN &bull; English</span>
+        <i class="fas fa-chevron-down ot-chevron"></i>
+    </button>
+    <div id="ot-lang-dropdown">
+        <a href="#" data-lang="en" class="ot-active"><span class="ot-flag">🇬🇧</span>English</a>
+        <a href="#" data-lang="af"><span class="ot-flag">🇿🇦</span>Afrikaans</a>
+        <a href="#" data-lang="sq"><span class="ot-flag">🇦🇱</span>Albanian</a>
+        <a href="#" data-lang="am"><span class="ot-flag">🇪🇹</span>Amharic</a>
+        <a href="#" data-lang="ar"><span class="ot-flag">🇸🇦</span>Arabic</a>
+        <a href="#" data-lang="hy"><span class="ot-flag">🇦🇲</span>Armenian</a>
+        <a href="#" data-lang="as"><span class="ot-flag">🇮🇳</span>Assamese</a>
+        <a href="#" data-lang="ay"><span class="ot-flag">🇧🇴</span>Aymara</a>
+        <a href="#" data-lang="az"><span class="ot-flag">🇦🇿</span>Azerbaijani</a>
+        <a href="#" data-lang="bm"><span class="ot-flag">🇲🇱</span>Bambara</a>
+        <a href="#" data-lang="eu"><span class="ot-flag">🏴</span>Basque</a>
+        <a href="#" data-lang="be"><span class="ot-flag">🇧🇾</span>Belarusian</a>
+        <a href="#" data-lang="bn"><span class="ot-flag">🇧🇩</span>Bengali</a>
+        <a href="#" data-lang="bho"><span class="ot-flag">🇮🇳</span>Bhojpuri</a>
+        <a href="#" data-lang="bs"><span class="ot-flag">🇧🇦</span>Bosnian</a>
+        <a href="#" data-lang="bg"><span class="ot-flag">🇧🇬</span>Bulgarian</a>
+        <a href="#" data-lang="ca"><span class="ot-flag">🏴</span>Catalan</a>
+        <a href="#" data-lang="ceb"><span class="ot-flag">🇵🇭</span>Cebuano</a>
+        <a href="#" data-lang="ny"><span class="ot-flag">🇲🇼</span>Chichewa</a>
+        <a href="#" data-lang="zh-CN"><span class="ot-flag">🇨🇳</span>Chinese (Simplified)</a>
+        <a href="#" data-lang="zh-TW"><span class="ot-flag">🇹🇼</span>Chinese (Traditional)</a>
+        <a href="#" data-lang="co"><span class="ot-flag">🇫🇷</span>Corsican</a>
+        <a href="#" data-lang="hr"><span class="ot-flag">🇭🇷</span>Croatian</a>
+        <a href="#" data-lang="cs"><span class="ot-flag">🇨🇿</span>Czech</a>
+        <a href="#" data-lang="da"><span class="ot-flag">🇩🇰</span>Danish</a>
+        <a href="#" data-lang="dv"><span class="ot-flag">🇲🇻</span>Dhivehi</a>
+        <a href="#" data-lang="doi"><span class="ot-flag">🇮🇳</span>Dogri</a>
+        <a href="#" data-lang="nl"><span class="ot-flag">🇳🇱</span>Dutch</a>
+        <a href="#" data-lang="eo"><span class="ot-flag">🌍</span>Esperanto</a>
+        <a href="#" data-lang="et"><span class="ot-flag">🇪🇪</span>Estonian</a>
+        <a href="#" data-lang="ee"><span class="ot-flag">🇬🇭</span>Ewe</a>
+        <a href="#" data-lang="tl"><span class="ot-flag">🇵🇭</span>Filipino</a>
+        <a href="#" data-lang="fi"><span class="ot-flag">🇫🇮</span>Finnish</a>
+        <a href="#" data-lang="fr"><span class="ot-flag">🇫🇷</span>French</a>
+        <a href="#" data-lang="fy"><span class="ot-flag">🇳🇱</span>Frisian</a>
+        <a href="#" data-lang="gl"><span class="ot-flag">🇪🇸</span>Galician</a>
+        <a href="#" data-lang="ka"><span class="ot-flag">🇬🇪</span>Georgian</a>
+        <a href="#" data-lang="de"><span class="ot-flag">🇩🇪</span>German</a>
+        <a href="#" data-lang="el"><span class="ot-flag">🇬🇷</span>Greek</a>
+        <a href="#" data-lang="gn"><span class="ot-flag">🇵🇾</span>Guarani</a>
+        <a href="#" data-lang="gu"><span class="ot-flag">🇮🇳</span>Gujarati</a>
+        <a href="#" data-lang="ht"><span class="ot-flag">🇭🇹</span>Haitian Creole</a>
+        <a href="#" data-lang="ha"><span class="ot-flag">🇳🇬</span>Hausa</a>
+        <a href="#" data-lang="haw"><span class="ot-flag">🇺🇸</span>Hawaiian</a>
+        <a href="#" data-lang="iw"><span class="ot-flag">🇮🇱</span>Hebrew</a>
+        <a href="#" data-lang="hi"><span class="ot-flag">🇮🇳</span>Hindi</a>
+        <a href="#" data-lang="hmn"><span class="ot-flag">🌏</span>Hmong</a>
+        <a href="#" data-lang="hu"><span class="ot-flag">🇭🇺</span>Hungarian</a>
+        <a href="#" data-lang="is"><span class="ot-flag">🇮🇸</span>Icelandic</a>
+        <a href="#" data-lang="ig"><span class="ot-flag">🇳🇬</span>Igbo</a>
+        <a href="#" data-lang="ilo"><span class="ot-flag">🇵🇭</span>Ilocano</a>
+        <a href="#" data-lang="id"><span class="ot-flag">🇮🇩</span>Indonesian</a>
+        <a href="#" data-lang="ga"><span class="ot-flag">🇮🇪</span>Irish</a>
+        <a href="#" data-lang="it"><span class="ot-flag">🇮🇹</span>Italian</a>
+        <a href="#" data-lang="ja"><span class="ot-flag">🇯🇵</span>Japanese</a>
+        <a href="#" data-lang="jw"><span class="ot-flag">🇮🇩</span>Javanese</a>
+        <a href="#" data-lang="kn"><span class="ot-flag">🇮🇳</span>Kannada</a>
+        <a href="#" data-lang="kk"><span class="ot-flag">🇰🇿</span>Kazakh</a>
+        <a href="#" data-lang="km"><span class="ot-flag">🇰🇭</span>Khmer</a>
+        <a href="#" data-lang="rw"><span class="ot-flag">🇷🇼</span>Kinyarwanda</a>
+        <a href="#" data-lang="gom"><span class="ot-flag">🇮🇳</span>Konkani</a>
+        <a href="#" data-lang="ko"><span class="ot-flag">🇰🇷</span>Korean</a>
+        <a href="#" data-lang="kri"><span class="ot-flag">🇸🇱</span>Krio</a>
+        <a href="#" data-lang="ku"><span class="ot-flag">🌍</span>Kurdish (Kurmanji)</a>
+        <a href="#" data-lang="ckb"><span class="ot-flag">🌍</span>Kurdish (Sorani)</a>
+        <a href="#" data-lang="ky"><span class="ot-flag">🇰🇬</span>Kyrgyz</a>
+        <a href="#" data-lang="lo"><span class="ot-flag">🇱🇦</span>Lao</a>
+        <a href="#" data-lang="la"><span class="ot-flag">🌍</span>Latin</a>
+        <a href="#" data-lang="lv"><span class="ot-flag">🇱🇻</span>Latvian</a>
+        <a href="#" data-lang="ln"><span class="ot-flag">🇨🇩</span>Lingala</a>
+        <a href="#" data-lang="lt"><span class="ot-flag">🇱🇹</span>Lithuanian</a>
+        <a href="#" data-lang="lg"><span class="ot-flag">🇺🇬</span>Luganda</a>
+        <a href="#" data-lang="lb"><span class="ot-flag">🇱🇺</span>Luxembourgish</a>
+        <a href="#" data-lang="mk"><span class="ot-flag">🇲🇰</span>Macedonian</a>
+        <a href="#" data-lang="mai"><span class="ot-flag">🇮🇳</span>Maithili</a>
+        <a href="#" data-lang="mg"><span class="ot-flag">🇲🇬</span>Malagasy</a>
+        <a href="#" data-lang="ms"><span class="ot-flag">🇲🇾</span>Malay</a>
+        <a href="#" data-lang="ml"><span class="ot-flag">🇮🇳</span>Malayalam</a>
+        <a href="#" data-lang="mt"><span class="ot-flag">🇲🇹</span>Maltese</a>
+        <a href="#" data-lang="mi"><span class="ot-flag">🇳🇿</span>Maori</a>
+        <a href="#" data-lang="mr"><span class="ot-flag">🇮🇳</span>Marathi</a>
+        <a href="#" data-lang="mni-Mtei"><span class="ot-flag">🇮🇳</span>Meitei (Manipuri)</a>
+        <a href="#" data-lang="lus"><span class="ot-flag">🇮🇳</span>Mizo</a>
+        <a href="#" data-lang="mn"><span class="ot-flag">🇲🇳</span>Mongolian</a>
+        <a href="#" data-lang="my"><span class="ot-flag">🇲🇲</span>Myanmar (Burmese)</a>
+        <a href="#" data-lang="ne"><span class="ot-flag">🇳🇵</span>Nepali</a>
+        <a href="#" data-lang="no"><span class="ot-flag">🇳🇴</span>Norwegian</a>
+        <a href="#" data-lang="or"><span class="ot-flag">🇮🇳</span>Odia (Oriya)</a>
+        <a href="#" data-lang="om"><span class="ot-flag">🇪🇹</span>Oromo</a>
+        <a href="#" data-lang="ps"><span class="ot-flag">🇦🇫</span>Pashto</a>
+        <a href="#" data-lang="fa"><span class="ot-flag">🇮🇷</span>Persian</a>
+        <a href="#" data-lang="pl"><span class="ot-flag">🇵🇱</span>Polish</a>
+        <a href="#" data-lang="pt"><span class="ot-flag">🇧🇷</span>Portuguese</a>
+        <a href="#" data-lang="pa"><span class="ot-flag">🇮🇳</span>Punjabi</a>
+        <a href="#" data-lang="qu"><span class="ot-flag">🇵🇪</span>Quechua</a>
+        <a href="#" data-lang="ro"><span class="ot-flag">🇷🇴</span>Romanian</a>
+        <a href="#" data-lang="ru"><span class="ot-flag">🇷🇺</span>Russian</a>
+        <a href="#" data-lang="sm"><span class="ot-flag">🇼🇸</span>Samoan</a>
+        <a href="#" data-lang="sa"><span class="ot-flag">🇮🇳</span>Sanskrit</a>
+        <a href="#" data-lang="gd"><span class="ot-flag">🏴󠁧󠁢󠁳󠁣󠁴󠁿</span>Scots Gaelic</a>
+        <a href="#" data-lang="nso"><span class="ot-flag">🇿🇦</span>Sepedi</a>
+        <a href="#" data-lang="sr"><span class="ot-flag">🇷🇸</span>Serbian</a>
+        <a href="#" data-lang="st"><span class="ot-flag">🇱🇸</span>Sesotho</a>
+        <a href="#" data-lang="sn"><span class="ot-flag">🇿🇼</span>Shona</a>
+        <a href="#" data-lang="sd"><span class="ot-flag">🇵🇰</span>Sindhi</a>
+        <a href="#" data-lang="si"><span class="ot-flag">🇱🇰</span>Sinhala</a>
+        <a href="#" data-lang="sk"><span class="ot-flag">🇸🇰</span>Slovak</a>
+        <a href="#" data-lang="sl"><span class="ot-flag">🇸🇮</span>Slovenian</a>
+        <a href="#" data-lang="so"><span class="ot-flag">🇸🇴</span>Somali</a>
+        <a href="#" data-lang="es"><span class="ot-flag">🇪🇸</span>Spanish</a>
+        <a href="#" data-lang="su"><span class="ot-flag">🇮🇩</span>Sundanese</a>
+        <a href="#" data-lang="sw"><span class="ot-flag">🇰🇪</span>Swahili</a>
+        <a href="#" data-lang="sv"><span class="ot-flag">🇸🇪</span>Swedish</a>
+        <a href="#" data-lang="tg"><span class="ot-flag">🇹🇯</span>Tajik</a>
+        <a href="#" data-lang="ta"><span class="ot-flag">🇮🇳</span>Tamil</a>
+        <a href="#" data-lang="tt"><span class="ot-flag">🇷🇺</span>Tatar</a>
+        <a href="#" data-lang="te"><span class="ot-flag">🇮🇳</span>Telugu</a>
+        <a href="#" data-lang="th"><span class="ot-flag">🇹🇭</span>Thai</a>
+        <a href="#" data-lang="ti"><span class="ot-flag">🇪🇷</span>Tigrinya</a>
+        <a href="#" data-lang="ts"><span class="ot-flag">🇿🇦</span>Tsonga</a>
+        <a href="#" data-lang="tr"><span class="ot-flag">🇹🇷</span>Turkish</a>
+        <a href="#" data-lang="tk"><span class="ot-flag">🇹🇲</span>Turkmen</a>
+        <a href="#" data-lang="ak"><span class="ot-flag">🇬🇭</span>Twi</a>
+        <a href="#" data-lang="uk"><span class="ot-flag">🇺🇦</span>Ukrainian</a>
+        <a href="#" data-lang="ur"><span class="ot-flag">🇵🇰</span>Urdu</a>
+        <a href="#" data-lang="ug"><span class="ot-flag">🇨🇳</span>Uyghur</a>
+        <a href="#" data-lang="uz"><span class="ot-flag">🇺🇿</span>Uzbek</a>
+        <a href="#" data-lang="vi"><span class="ot-flag">🇻🇳</span>Vietnamese</a>
+        <a href="#" data-lang="cy"><span class="ot-flag">🏴󠁧󠁢󠁷󠁬󠁳󠁿</span>Welsh</a>
+        <a href="#" data-lang="xh"><span class="ot-flag">🇿🇦</span>Xhosa</a>
+        <a href="#" data-lang="yi"><span class="ot-flag">🌍</span>Yiddish</a>
+        <a href="#" data-lang="yo"><span class="ot-flag">🇳🇬</span>Yoruba</a>
+        <a href="#" data-lang="zu"><span class="ot-flag">🇿🇦</span>Zulu</a>
+    </div>
+</div>
+
+<!-- Hidden Google Translate widget (must be in body to function) -->
+<div id="google_translate_element"></div>
+
+<!-- Google Translate init -->
+<script type="text/javascript">
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({ pageLanguage: 'en', autoDisplay: false }, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script>
+(function () {
+    var langNames = {
+        'en':'EN • English','af':'AF • Afrikaans','sq':'SQ • Albanian','am':'AM • Amharic',
+        'ar':'AR • Arabic','hy':'HY • Armenian','as':'AS • Assamese','ay':'AY • Aymara',
+        'az':'AZ • Azerbaijani','bm':'BM • Bambara','eu':'EU • Basque','be':'BE • Belarusian',
+        'bn':'BN • Bengali','bho':'BHO • Bhojpuri','bs':'BS • Bosnian','bg':'BG • Bulgarian',
+        'ca':'CA • Catalan','ceb':'CEB • Cebuano','ny':'NY • Chichewa',
+        'zh-CN':'ZH • Chinese (Simplified)','zh-TW':'ZH • Chinese (Traditional)',
+        'co':'CO • Corsican','hr':'HR • Croatian','cs':'CS • Czech','da':'DA • Danish',
+        'dv':'DV • Dhivehi','doi':'DOI • Dogri','nl':'NL • Dutch','eo':'EO • Esperanto',
+        'et':'ET • Estonian','ee':'EE • Ewe','tl':'TL • Filipino','fi':'FI • Finnish',
+        'fr':'FR • French','fy':'FY • Frisian','gl':'GL • Galician','ka':'KA • Georgian',
+        'de':'DE • German','el':'EL • Greek','gn':'GN • Guarani','gu':'GU • Gujarati',
+        'ht':'HT • Haitian Creole','ha':'HA • Hausa','haw':'HAW • Hawaiian',
+        'iw':'IW • Hebrew','hi':'HI • Hindi','hmn':'HMN • Hmong','hu':'HU • Hungarian',
+        'is':'IS • Icelandic','ig':'IG • Igbo','ilo':'ILO • Ilocano','id':'ID • Indonesian',
+        'ga':'GA • Irish','it':'IT • Italian','ja':'JA • Japanese','jw':'JW • Javanese',
+        'kn':'KN • Kannada','kk':'KK • Kazakh','km':'KM • Khmer','rw':'RW • Kinyarwanda',
+        'gom':'GOM • Konkani','ko':'KO • Korean','kri':'KRI • Krio',
+        'ku':'KU • Kurdish (Kurmanji)','ckb':'CKB • Kurdish (Sorani)','ky':'KY • Kyrgyz',
+        'lo':'LO • Lao','la':'LA • Latin','lv':'LV • Latvian','ln':'LN • Lingala',
+        'lt':'LT • Lithuanian','lg':'LG • Luganda','lb':'LB • Luxembourgish',
+        'mk':'MK • Macedonian','mai':'MAI • Maithili','mg':'MG • Malagasy',
+        'ms':'MS • Malay','ml':'ML • Malayalam','mt':'MT • Maltese','mi':'MI • Maori',
+        'mr':'MR • Marathi','mni-Mtei':'MNI • Meitei (Manipuri)','lus':'LUS • Mizo',
+        'mn':'MN • Mongolian','my':'MY • Myanmar','ne':'NE • Nepali','no':'NO • Norwegian',
+        'or':'OR • Odia','om':'OM • Oromo','ps':'PS • Pashto','fa':'FA • Persian',
+        'pl':'PL • Polish','pt':'PT • Portuguese','pa':'PA • Punjabi','qu':'QU • Quechua',
+        'ro':'RO • Romanian','ru':'RU • Russian','sm':'SM • Samoan','sa':'SA • Sanskrit',
+        'gd':'GD • Scots Gaelic','nso':'NSO • Sepedi','sr':'SR • Serbian',
+        'st':'ST • Sesotho','sn':'SN • Shona','sd':'SD • Sindhi','si':'SI • Sinhala',
+        'sk':'SK • Slovak','sl':'SL • Slovenian','so':'SO • Somali','es':'ES • Spanish',
+        'su':'SU • Sundanese','sw':'SW • Swahili','sv':'SV • Swedish','tg':'TG • Tajik',
+        'ta':'TA • Tamil','tt':'TT • Tatar','te':'TE • Telugu','th':'TH • Thai',
+        'ti':'TI • Tigrinya','ts':'TS • Tsonga','tr':'TR • Turkish','tk':'TK • Turkmen',
+        'ak':'AK • Twi','uk':'UK • Ukrainian','ur':'UR • Urdu','ug':'UG • Uyghur',
+        'uz':'UZ • Uzbek','vi':'VI • Vietnamese','cy':'CY • Welsh','xh':'XH • Xhosa',
+        'yi':'YI • Yiddish','yo':'YO • Yoruba','zu':'ZU • Zulu'
+    };
+
+    var bar = document.getElementById('ot-lang-bar');
+    var btn = document.getElementById('ot-lang-btn');
+    var label = document.getElementById('ot-lang-current');
+    var links = document.querySelectorAll('#ot-lang-dropdown a');
+
+    btn.addEventListener('click', function (e) { e.stopPropagation(); bar.classList.toggle('open'); });
+    document.addEventListener('click', function () { bar.classList.remove('open'); });
+
+    function doTranslate(lang) {
+        var sel = document.querySelector('#google_translate_element select');
+        if (sel) {
+            sel.value = lang;
+            sel.dispatchEvent(new Event('change'));
+        } else {
+            var tries = 0;
+            var poll = setInterval(function () {
+                var s = document.querySelector('#google_translate_element select');
+                if (s) { clearInterval(poll); s.value = lang; s.dispatchEvent(new Event('change')); }
+                if (++tries > 30) clearInterval(poll);
+            }, 300);
+        }
+    }
+
+    links.forEach(function (a) {
+        a.addEventListener('click', function (e) {
+            e.preventDefault();
+            var lang = this.getAttribute('data-lang');
+            links.forEach(function (l) { l.classList.remove('ot-active'); });
+            this.classList.add('ot-active');
+            label.innerHTML = langNames[lang] || lang.toUpperCase();
+            bar.classList.remove('open');
+            doTranslate(lang);
+        });
+    });
+
+    // Disable custom cursor on touch devices
+    var cursor = document.getElementById('custom-cursor');
+    if (cursor && ('ontouchstart' in window || navigator.maxTouchPoints > 0)) {
+        cursor.style.display = 'none';
+    }
+})();
+</script>
 <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
 <div data-elementor-type="header" data-elementor-id="17" class="elementor elementor-17 elementor-location-header" data-elementor-post-type="elementor_library">
 <div class="elementor-section-wrap">
