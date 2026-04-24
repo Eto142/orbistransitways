@@ -14,7 +14,7 @@
     /* ── HERO ── */
     .tn-hero {
         position: relative;
-        min-height: 100vh;
+        min-height: 68vh;
         overflow: hidden;
         display: flex;
         flex-direction: column;
@@ -69,7 +69,7 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-        padding: 120px 24px 160px;
+        padding: 92px 24px 118px;
     }
 
     /* Live badge */
@@ -387,8 +387,9 @@
         .step-connector { display: none; }
     }
     @media (max-width: 768px) {
-        .tn-content { padding: 110px 20px 180px; }
-        .tn-card-wrap { margin-top: -90px; }
+        .tn-hero { min-height: 58vh; }
+        .tn-content { padding: 92px 20px 132px; }
+        .tn-card-wrap { margin-top: -82px; }
         .tn-card-top  { padding: 16px 22px; }
         .tn-card-body { padding: 26px 22px 22px; }
         .tn-stats { margin-top: 70px; }
@@ -396,6 +397,7 @@
         .tn-trust-item { font-size: .8rem; }
     }
     @media (max-width: 576px) {
+        .tn-hero { min-height: 52vh; }
         .tn-btn { padding: 16px 22px; font-size: .82rem; letter-spacing: 0; }
         .tn-card-meta { flex-direction: column; align-items: flex-start; }
         .tn-hero::after { height: 50px; }
