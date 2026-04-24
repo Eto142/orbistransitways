@@ -210,12 +210,13 @@ iframe.goog-te-banner-frame { display: none !important; height: 0 !important; }
 /* ── Preloader base ── */
 #ot-preloader{
   position:fixed;inset:0;
-  background:#023761;
+  background:#ffffff;
   z-index:2147483647;
   display:flex;flex-direction:column;
   align-items:center;justify-content:center;
   overflow:hidden;
   transition:opacity .7s ease,visibility .7s ease;
+  box-shadow:inset 0 0 120px rgba(2,55,97,.06);
 }
 #ot-preloader.ot-gone{opacity:0;visibility:hidden;pointer-events:none;}
 body.ot-loading{overflow:hidden;}
@@ -225,7 +226,7 @@ body.ot-loading{overflow:hidden;}
 .ot-p{
   position:absolute;bottom:-30px;
   width:10px;height:10px;
-  border:2px solid rgba(212,43,34,.30);
+  border:2px solid rgba(2,55,97,.18);
   border-radius:2px;
   animation:otFloat linear infinite;
   opacity:0;
@@ -244,8 +245,8 @@ body.ot-loading{overflow:hidden;}
 }
 .ot-logo img{
   width:220px;display:block;
-  filter:brightness(0) invert(1);
-  drop-shadow:0 4px 20px rgba(0,0,0,.4);
+  filter:none;
+  drop-shadow:0 4px 20px rgba(0,0,0,.12);
 }
 @keyframes otSlideD{from{opacity:0;transform:translateY(-28px);}to{opacity:1;transform:translateY(0);}}
 
@@ -259,7 +260,7 @@ body.ot-loading{overflow:hidden;}
 /* ── percent label (follows truck) ── */
 .ot-pct{
   position:absolute;top:-26px;left:0;
-  color:rgba(255,255,255,.75);
+  color:rgba(2,55,97,.70);
   font-family:'Rajdhani','Segoe UI',sans-serif;
   font-size:13px;font-weight:700;letter-spacing:1px;
   transition:left .15s linear;
@@ -268,7 +269,7 @@ body.ot-loading{overflow:hidden;}
 /* ── road ── */
 .ot-road{
   height:7px;
-  background:rgba(255,255,255,.10);
+  background:rgba(2,55,97,.10);
   border-radius:4px;
   overflow:hidden;
   margin-top:40px;
@@ -291,13 +292,13 @@ body.ot-loading{overflow:hidden;}
 /* ── tagline ── */
 .ot-tagline{
   margin-top:30px;
-  color:rgba(255,255,255,.45);
+  color:rgba(2,55,97,.45);
   font-family:'Rajdhani','Segoe UI',sans-serif;
   font-size:11px;letter-spacing:4px;text-transform:uppercase;
   display:flex;align-items:center;gap:1px;
   animation:otSlideU .85s .35s cubic-bezier(.22,1,.36,1) both;
 }
-.ot-tagline span{color:#FF7900;font-size:15px;animation:otDot 1.5s infinite;}
+.ot-tagline span{color:#D42B22;font-size:15px;animation:otDot 1.5s infinite;}
 .ot-tagline span:nth-child(2){animation-delay:.22s;}
 .ot-tagline span:nth-child(3){animation-delay:.44s;}
 .ot-tagline span:nth-child(4){animation-delay:.66s;}
@@ -312,10 +313,10 @@ body.ot-loading{overflow:hidden;}
     <div class="ot-p" style="left:15%;animation-duration:9s;animation-delay:1.2s;width:12px;height:12px;"></div>
     <div class="ot-p" style="left:25%;animation-duration:6s;animation-delay:0.5s;"></div>
     <div class="ot-p" style="left:38%;animation-duration:8s;animation-delay:2s;width:7px;height:7px;"></div>
-    <div class="ot-p" style="left:50%;animation-duration:11s;animation-delay:0.3s;width:14px;height:14px;border-color:rgba(255,121,0,.25);"></div>
+    <div class="ot-p" style="left:50%;animation-duration:11s;animation-delay:0.3s;width:14px;height:14px;border-color:rgba(212,43,34,.15);"></div>
     <div class="ot-p" style="left:62%;animation-duration:7.5s;animation-delay:1.8s;"></div>
     <div class="ot-p" style="left:73%;animation-duration:9.5s;animation-delay:0.8s;width:9px;height:9px;"></div>
-    <div class="ot-p" style="left:83%;animation-duration:6.5s;animation-delay:2.5s;width:11px;height:11px;border-color:rgba(255,121,0,.25);"></div>
+    <div class="ot-p" style="left:83%;animation-duration:6.5s;animation-delay:2.5s;width:11px;height:11px;border-color:rgba(212,43,34,.15);"></div>
     <div class="ot-p" style="left:91%;animation-duration:8.5s;animation-delay:1s;"></div>
   </div>
 
