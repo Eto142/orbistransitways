@@ -14,7 +14,7 @@
     /* ── HERO ── */
     .tn-hero {
         position: relative;
-        min-height: 68vh;
+        min-height: 52vh;
         overflow: hidden;
         display: flex;
         flex-direction: column;
@@ -69,7 +69,7 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-        padding: 92px 24px 118px;
+        padding: 72px 24px 88px;
     }
 
     /* Live badge */
@@ -126,7 +126,7 @@
     /* ── FLOATING TRACK CARD ── */
     .tn-card-wrap {
         position: relative; z-index: 10;
-        margin-top: -76px;
+        margin-top: -108px;
         padding: 0 16px;
     }
     .tn-card {
@@ -387,9 +387,9 @@
         .step-connector { display: none; }
     }
     @media (max-width: 768px) {
-        .tn-hero { min-height: 58vh; }
-        .tn-content { padding: 92px 20px 132px; }
-        .tn-card-wrap { margin-top: -82px; }
+        .tn-hero { min-height: 46vh; }
+        .tn-content { padding: 68px 20px 108px; }
+        .tn-card-wrap { margin-top: -94px; }
         .tn-card-top  { padding: 16px 22px; }
         .tn-card-body { padding: 26px 22px 22px; }
         .tn-stats { margin-top: 70px; }
@@ -397,11 +397,11 @@
         .tn-trust-item { font-size: .8rem; }
     }
     @media (max-width: 576px) {
-        .tn-hero { min-height: 52vh; }
+        .tn-hero { min-height: 40vh; }
         .tn-btn { padding: 16px 22px; font-size: .82rem; letter-spacing: 0; }
         .tn-card-meta { flex-direction: column; align-items: flex-start; }
         .tn-hero::after { height: 50px; }
-        .tn-card-wrap { margin-top: -46px; }
+        .tn-card-wrap { margin-top: -72px; }
     }
 </style>
 @endpush
