@@ -1,13 +1,13 @@
-﻿<div data-elementor-type="footer" data-elementor-id="21" class="elementor elementor-21 elementor-location-footer" data-elementor-post-type="elementor_library">
+<div data-elementor-type="footer" data-elementor-id="21" class="elementor elementor-21 elementor-location-footer" data-elementor-post-type="elementor_library">
 <div class="elementor-section-wrap">
 <section class="elementor-section elementor-top-section elementor-element elementor-element-52de6a56 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="52de6a56" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
 <div class="elementor-background-overlay"></div><div class="elementor-container elementor-column-gap-no">
 <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-40465806" data-id="40465806" data-element_type="column">
 <div class="elementor-widget-wrap elementor-element-populated">
 <div class="elementor-element elementor-element-1fdb3f43 elementor-invisible elementor-widget elementor-widget-image" data-id="1fdb3f43" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="image.default">
-<div class="elementor-widget-container"> <img onload="Wpfcll.r(this,true);" src="wp-content/plugins/wp-fastest-cache-premium/pro/images/blank.gif" width="527" height="151" data-wpfc-original-src="wp-content/uploads/2022/04/Screenshot_20231009_092214-removebg-preview.png" class="attachment-large size-large wp-image-1034" alt="blank" data-wpfc-original-srcset="wp-content/uploads/2022/04/Screenshot_20231009_092214-removebg-preview.png 527w, wp-content/uploads/2022/04/Screenshot_20231009_092214-removebg-preview-300x86.png 300w" data-wpfc-original-sizes="(max-width: 527px) 100vw, 527px"/></div></div><div class="elementor-element elementor-element-2305bf81 elementor-widget elementor-widget-heading" data-id="2305bf81" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container"> <img src="/wp-content/uploads/2022/04/Screenshot_20231009_092214-removebg-preview.png" width="527" height="151"  class="attachment-large size-large wp-image-1034" alt="blank" data-wpfc-original-srcset="/wp-content/uploads/2022/04/Screenshot_20231009_092214-removebg-preview.png 527w, wp-content/uploads/2022/04/Screenshot_20231009_092214-removebg-preview-300x86.png 300w" data-wpfc-original-sizes="(max-width: 527px) 100vw, 527px"/></div></div><div class="elementor-element elementor-element-2305bf81 elementor-widget elementor-widget-heading" data-id="2305bf81" data-element_type="widget" data-widget_type="heading.default">
 <div class="elementor-widget-container">
-<div class="elementor-heading-title elementor-size-default">Address: Head Office: Brandenburgische Str 60 Bickenbach, Rheinland-Pfalz,
+<div class="elementor-heading-title elementor-size-default">Address: Head Office: Holstenwall 37, Rottleberode, Sachsen-Anhalt,
  Germany<br>We are have offices round the global that is why we are able to ship wordwide</div></div></div><div class="elementor-element elementor-element-46eac7b7 elementor-widget-mobile__width-initial elementor-widget elementor-widget-icon-box" data-id="46eac7b7" data-element_type="widget" data-widget_type="icon-box.default">
 <div class="elementor-widget-container">
 <link rel="stylesheet" type="text/css" href="wp-content/cache/wpfc-minified/ermxpxp5/1y6mw.css" media="all"/>		<div class="elementor-icon-box-wrapper">
@@ -50,7 +50,7 @@
 <div class="elementor-widget-wrap elementor-element-populated">
 <div class="elementor-element elementor-element-6fd0d2d elementor-widget elementor-widget-heading" data-id="6fd0d2d" data-element_type="widget" data-widget_type="heading.default">
 <div class="elementor-widget-container">
-<div class="elementor-heading-title elementor-size-default"><a href="index.html">© Copyright 2026 Orbistransitways</a></div></div></div></div></div><div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-63a3833b" data-id="63a3833b" data-element_type="column">
+<div class="elementor-heading-title elementor-size-default"><a href="index.html">© Copyright 2025 Orbistransitways</a></div></div></div></div></div><div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-63a3833b" data-id="63a3833b" data-element_type="column">
 <div class="elementor-widget-wrap elementor-element-populated">
 <div class="elementor-element elementor-element-347f8ce4 elementor-widget__width-auto elementor-widget elementor-widget-heading" data-id="347f8ce4" data-element_type="widget" data-widget_type="heading.default">
 <div class="elementor-widget-container">
@@ -65,7 +65,7 @@
 <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5f9aec31" data-id="5f9aec31" data-element_type="column">
 <div class="elementor-widget-wrap elementor-element-populated">
 <div class="elementor-element elementor-element-49ed1a93 elementor-widget elementor-widget-image" data-id="49ed1a93" data-element_type="widget" data-widget_type="image.default">
-<div class="elementor-widget-container"> <img onload="Wpfcll.r(this,true);" src="wp-content/plugins/wp-fastest-cache-premium/pro/images/blank.gif" width="378" height="500" data-wpfc-original-src="wp-content/uploads/2022/04/bg-popup.jpg" class="attachment-large size-large wp-image-110" alt="blank" data-wpfc-original-srcset="wp-content/uploads/2022/04/bg-popup.jpg 378w, wp-content/uploads/2022/04/bg-popup-227x300.jpg 227w" data-wpfc-original-sizes="(max-width: 378px) 100vw, 378px"/></div></div></div></div><div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-6c144820" data-id="6c144820" data-element_type="column">
+<div class="elementor-widget-container"> <img src="/wp-content/uploads/2022/04/bg-popup.jpg" width="378" height="500"  class="attachment-large size-large wp-image-110" alt="blank" data-wpfc-original-srcset="/wp-content/uploads/2022/04/bg-popup.jpg 378w, wp-content/uploads/2022/04/bg-popup-227x300.jpg 227w" data-wpfc-original-sizes="(max-width: 378px) 100vw, 378px"/></div></div></div></div><div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-6c144820" data-id="6c144820" data-element_type="column">
 <div class="elementor-widget-wrap elementor-element-populated">
 <div class="elementor-element elementor-element-558521d1 elementor-invisible elementor-widget elementor-widget-heading" data-id="558521d1" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
 <div class="elementor-widget-container"> <h2 class="elementor-heading-title elementor-size-default">BE THE FIRST</h2></div></div><div class="elementor-element elementor-element-456d2f77 elementor-widget elementor-widget-heading" data-id="456d2f77" data-element_type="widget" data-widget_type="heading.default">
@@ -96,38 +96,6 @@ resturl: 'https://fastelitelogistics.com/wp-json/elementskit/v1/',
 <script defer src='wp-content/cache/wpfc-minified/mnv1x08k/1y6mf.js'></script>
 <script defer src="wp-content/cache/wpfc-minified/qkc3rs96/1y6mf.js" id="elementor-frontend-js"></script>
 <script defer src='wp-content/cache/wpfc-minified/1rpvrfxl/1y6mf.js'></script>
-<script>
-(function() {
-    var cursor = document.getElementById('custom-cursor');
-    if (!cursor) return;
-    var mouseX = 0, mouseY = 0;
-    var currentX = 0, currentY = 0;
-    var pauseTimer = null;
-    document.addEventListener('mousemove', function(e) {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-        cursor.classList.remove('paused');
-        clearTimeout(pauseTimer);
-        pauseTimer = setTimeout(function() {
-            cursor.classList.add('paused');
-        }, 500);
-    });
-    document.addEventListener('mousedown', function() {
-        cursor.classList.add('paused');
-    });
-    document.addEventListener('mouseup', function() {
-        cursor.classList.remove('paused');
-    });
-    function animateCursor() {
-        currentX += (mouseX - currentX) * 0.45;
-        currentY += (mouseY - currentY) * 0.45;
-        cursor.style.left = currentX + 'px';
-        cursor.style.top  = currentY + 'px';
-        requestAnimationFrame(animateCursor);
-    }
-    animateCursor();
-})();
-</script>
 <script>document.addEventListener('DOMContentLoaded',function(){function wpfcgl(){var wgh=document.querySelector('noscript#wpfc-google-fonts').innerText, wgha=wgh.match(/<link[^\>]+>/gi);for(i=0;i<wgha.length;i++){var wrpr=document.createElement('div');wrpr.innerHTML=wgha[i];document.body.appendChild(wrpr.firstChild);}}wpfcgl();});</script>
 </body>
 

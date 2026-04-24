@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en-US">
 
 <head>
@@ -62,8 +62,10 @@
 <meta name="msapplication-TileImage" content="wp-content/uploads/2022/04/Screenshot_20231009_092214.png"/>
 <script data-wpfc-render="false">var Wpfcll={s:[],osl:0,scroll:false,i:function(){Wpfcll.ss();window.addEventListener('load',function(){window.addEventListener("DOMSubtreeModified",function(e){Wpfcll.osl=Wpfcll.s.length;Wpfcll.ss();if(Wpfcll.s.length > Wpfcll.osl){Wpfcll.ls(false);}},false);Wpfcll.ls(true);});window.addEventListener('scroll',function(){Wpfcll.scroll=true;Wpfcll.ls(false);});window.addEventListener('resize',function(){Wpfcll.scroll=true;Wpfcll.ls(false);});window.addEventListener('click',function(){Wpfcll.scroll=true;Wpfcll.ls(false);});},c:function(e,pageload){var w=document.documentElement.clientHeight || body.clientHeight;var n=0;if(pageload){n=0;}else{n=(w > 800) ? 800:200;n=Wpfcll.scroll ? 800:n;}var er=e.getBoundingClientRect();var t=0;var p=e.parentNode ? e.parentNode:false;if(typeof p.getBoundingClientRect=="undefined"){var pr=false;}else{var pr=p.getBoundingClientRect();}if(er.x==0 && er.y==0){for(var i=0;i < 10;i++){if(p){if(pr.x==0 && pr.y==0){if(p.parentNode){p=p.parentNode;}if(typeof p.getBoundingClientRect=="undefined"){pr=false;}else{pr=p.getBoundingClientRect();}}else{t=pr.top;break;}}};}else{t=er.top;}if(w - t+n > 0){return true;}return false;},r:function(e,pageload){var s=this;var oc,ot;try{oc=e.getAttribute("data-wpfc-original-src");ot=e.getAttribute("data-wpfc-original-srcset");originalsizes=e.getAttribute("data-wpfc-original-sizes");if(s.c(e,pageload)){if(oc || ot){if(e.tagName=="DIV" || e.tagName=="A" || e.tagName=="SPAN"){e.style.backgroundImage="url("+oc+")";e.removeAttribute("data-wpfc-original-src");e.removeAttribute("data-wpfc-original-srcset");e.removeAttribute("onload");}else{if(oc){e.setAttribute('src',oc);}if(ot){e.setAttribute('srcset',ot);}if(originalsizes){e.setAttribute('sizes',originalsizes);}if(e.getAttribute("alt") && e.getAttribute("alt")=="blank"){e.removeAttribute("alt");}e.removeAttribute("data-wpfc-original-src");e.removeAttribute("data-wpfc-original-srcset");e.removeAttribute("data-wpfc-original-sizes");e.removeAttribute("onload");if(e.tagName=="IFRAME"){var y="https://www.youtube.com/embed/";if(navigator.userAgent.match(/\sEdge?\/\d/i)){e.setAttribute('src',e.getAttribute("src").replace(/.+\/templates\/youtube\.html\#/,y));}e.onload=function(){if(typeof window.jQuery !="undefined"){if(jQuery.fn.fitVids){jQuery(e).parent().fitVids({customSelector:"iframe[src]"});}}var s=e.getAttribute("src").match(/templates\/youtube\.html\#(.+)/);if(s){try{var i=e.contentDocument || e.contentWindow;if(i.location.href=="about:blank"){e.setAttribute('src',y+s[1]);}}catch(err){e.setAttribute('src',y+s[1]);}}}}}}else{if(e.tagName=="NOSCRIPT"){if(jQuery(e).attr("data-type")=="wpfc"){e.removeAttribute("data-type");jQuery(e).after(jQuery(e).text());}}}}}catch(error){console.log(error);console.log("==>",e);}},ss:function(){var i=Array.prototype.slice.call(document.getElementsByTagName("img"));var f=Array.prototype.slice.call(document.getElementsByTagName("iframe"));var d=Array.prototype.slice.call(document.getElementsByTagName("div"));var a=Array.prototype.slice.call(document.getElementsByTagName("a"));var s=Array.prototype.slice.call(document.getElementsByTagName("span"));var n=Array.prototype.slice.call(document.getElementsByTagName("noscript"));this.s=i.concat(f).concat(d).concat(a).concat(s).concat(n);},ls:function(pageload){var s=this;[].forEach.call(s.s,function(e,index){s.r(e,pageload);});}};document.addEventListener('DOMContentLoaded',function(){wpfci();});function wpfci(){Wpfcll.i();}</script>
 <style>
-html { margin: 0 !important; padding: 0 !important; }
+html { margin: 0 !important; padding: 0 !important; top: 0 !important; }
+html.translated-ltr, html.translated-rtl { margin: 0 !important; padding: 0 !important; top: 0 !important; }
 body { margin: 0 !important; padding: 0 !important; top: 0 !important; position: static !important; }
+#wpadminbar { display: none !important; }
 .goog-te-banner-frame,
 .goog-te-banner-frame.skiptranslate,
 iframe.goog-te-banner-frame { display: none !important; height: 0 !important; }
@@ -109,54 +111,55 @@ iframe.goog-te-banner-frame { display: none !important; height: 0 !important; }
 
 /* ── Custom Language Switcher Bar ── */
 #ot-lang-bar {
-    background: #12122a;
+    background: #ffffff;
     padding: 5px 16px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     position: relative;
     z-index: 10000;
+    border-bottom: 1px solid #e8e8e8;
 }
 #ot-lang-btn {
     display: inline-flex;
     align-items: center;
     gap: 7px;
-    background: rgba(255,255,255,0.07);
-    border: 1px solid rgba(255,255,255,0.16);
-    color: #fff;
+    background: transparent;
+    border: 1px solid #ddd;
+    color: #333;
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 0.4px;
     padding: 5px 13px;
     border-radius: 20px;
     cursor: pointer;
-    transition: background 0.2s, border-color 0.2s;
+    transition: background 0.2s, border-color 0.2s, color 0.2s;
     font-family: 'Segoe UI', Arial, sans-serif;
     line-height: 1;
 }
-#ot-lang-btn:hover { background: rgba(230,57,70,0.25); border-color: #e63946; }
+#ot-lang-btn:hover { background: rgba(230,57,70,0.08); border-color: #e63946; color: #e63946; }
 #ot-lang-btn .ot-globe { color: #e63946; font-size: 13px; }
-#ot-lang-btn .ot-chevron { font-size: 9px; opacity: 0.65; transition: transform 0.2s; }
+#ot-lang-btn .ot-chevron { font-size: 9px; opacity: 0.5; transition: transform 0.2s; }
 #ot-lang-bar.open #ot-lang-btn .ot-chevron { transform: rotate(180deg); }
 #ot-lang-dropdown {
     display: none;
     position: absolute;
     top: calc(100% + 4px);
     right: 12px;
-    background: #1a1a2e;
-    border: 1px solid rgba(255,255,255,0.1);
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
     border-radius: 10px;
-    box-shadow: 0 10px 32px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 32px rgba(0,0,0,0.12);
     z-index: 99999;
     min-width: 190px;
     max-height: 320px;
     overflow-y: auto;
     overflow-x: hidden;
     scrollbar-width: thin;
-    scrollbar-color: #e63946 #12122a;
+    scrollbar-color: #e63946 #f0f0f0;
 }
 #ot-lang-dropdown::-webkit-scrollbar { width: 5px; }
-#ot-lang-dropdown::-webkit-scrollbar-track { background: #12122a; border-radius: 0 10px 10px 0; }
+#ot-lang-dropdown::-webkit-scrollbar-track { background: #f0f0f0; border-radius: 0 10px 10px 0; }
 #ot-lang-dropdown::-webkit-scrollbar-thumb { background: #e63946; border-radius: 4px; }
 #ot-lang-bar.open #ot-lang-dropdown { display: block; }
 #ot-lang-dropdown a {
@@ -164,15 +167,15 @@ iframe.goog-te-banner-frame { display: none !important; height: 0 !important; }
     align-items: center;
     gap: 10px;
     padding: 9px 16px;
-    color: rgba(255,255,255,0.8);
+    color: #333;
     font-size: 13px;
     font-family: 'Segoe UI', Arial, sans-serif;
     text-decoration: none;
     transition: background 0.15s, color 0.15s;
-    border-bottom: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid #f0f0f0;
 }
 #ot-lang-dropdown a:last-child { border-bottom: none; }
-#ot-lang-dropdown a:hover, #ot-lang-dropdown a.ot-active { background: rgba(230,57,70,0.18); color: #fff; }
+#ot-lang-dropdown a:hover, #ot-lang-dropdown a.ot-active { background: rgba(230,57,70,0.08); color: #e63946; }
 #ot-lang-dropdown a .ot-flag { font-size: 17px; line-height: 1; flex-shrink: 0; }
 
 /* Keep raw Google Translate widget invisible but functional */
@@ -199,6 +202,217 @@ iframe.goog-te-banner-frame { display: none !important; height: 0 !important; }
 
 
 <body class="home page-template page-template-elementor_header_footer page page-id-6 wp-custom-logo elementor-default elementor-template-full-width elementor-kit-12 elementor-page elementor-page-6">
+
+<!-- ══════════════════════════════════════
+     PRELOADER
+══════════════════════════════════════ -->
+<style>
+/* ── Preloader base ── */
+#ot-preloader{
+  position:fixed;inset:0;
+  background:#023761;
+  z-index:2147483647;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  overflow:hidden;
+  transition:opacity .7s ease,visibility .7s ease;
+}
+#ot-preloader.ot-gone{opacity:0;visibility:hidden;pointer-events:none;}
+body.ot-loading{overflow:hidden;}
+
+/* ── floating cargo-box particles ── */
+.ot-particles{position:absolute;inset:0;pointer-events:none;overflow:hidden;}
+.ot-p{
+  position:absolute;bottom:-30px;
+  width:10px;height:10px;
+  border:2px solid rgba(212,43,34,.30);
+  border-radius:2px;
+  animation:otFloat linear infinite;
+  opacity:0;
+}
+@keyframes otFloat{
+  0%  {transform:translateY(0) rotate(0deg);opacity:0;}
+  8%  {opacity:.9;}
+  90% {opacity:.4;}
+  100%{transform:translateY(-105vh) rotate(210deg);opacity:0;}
+}
+
+/* ── logo ── */
+.ot-logo{
+  margin-bottom:48px;
+  animation:otSlideD .85s cubic-bezier(.22,1,.36,1) forwards;
+}
+.ot-logo img{
+  width:220px;display:block;
+  filter:brightness(0) invert(1);
+  drop-shadow:0 4px 20px rgba(0,0,0,.4);
+}
+@keyframes otSlideD{from{opacity:0;transform:translateY(-28px);}to{opacity:1;transform:translateY(0);}}
+
+/* ── track wrapper ── */
+.ot-track-wrap{
+  width:360px;position:relative;
+  animation:otSlideU .85s .18s cubic-bezier(.22,1,.36,1) both;
+}
+@keyframes otSlideU{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:translateY(0);}}
+
+/* ── percent label (follows truck) ── */
+.ot-pct{
+  position:absolute;top:-26px;left:0;
+  color:rgba(255,255,255,.75);
+  font-family:'Rajdhani','Segoe UI',sans-serif;
+  font-size:13px;font-weight:700;letter-spacing:1px;
+  transition:left .15s linear;
+}
+
+/* ── road ── */
+.ot-road{
+  height:7px;
+  background:rgba(255,255,255,.10);
+  border-radius:4px;
+  overflow:hidden;
+  margin-top:40px;
+}
+.ot-fill{
+  height:100%;width:0%;
+  background:linear-gradient(90deg,#D42B22,#FF7900);
+  border-radius:4px;
+  box-shadow:0 0 14px rgba(255,121,0,.55);
+  transition:width .15s linear;
+}
+
+/* ── truck ── */
+.ot-truck{
+  position:absolute;
+  bottom:6px;left:-22px;
+  transition:left .15s linear;
+}
+
+/* ── tagline ── */
+.ot-tagline{
+  margin-top:30px;
+  color:rgba(255,255,255,.45);
+  font-family:'Rajdhani','Segoe UI',sans-serif;
+  font-size:11px;letter-spacing:4px;text-transform:uppercase;
+  display:flex;align-items:center;gap:1px;
+  animation:otSlideU .85s .35s cubic-bezier(.22,1,.36,1) both;
+}
+.ot-tagline span{color:#FF7900;font-size:15px;animation:otDot 1.5s infinite;}
+.ot-tagline span:nth-child(2){animation-delay:.22s;}
+.ot-tagline span:nth-child(3){animation-delay:.44s;}
+.ot-tagline span:nth-child(4){animation-delay:.66s;}
+@keyframes otDot{0%,80%,100%{opacity:.2;transform:translateY(0);}40%{opacity:1;transform:translateY(-4px);}}
+</style>
+
+<div id="ot-preloader">
+
+  <!-- particles -->
+  <div class="ot-particles">
+    <div class="ot-p" style="left:5%;animation-duration:7s;animation-delay:0s;width:8px;height:8px;"></div>
+    <div class="ot-p" style="left:15%;animation-duration:9s;animation-delay:1.2s;width:12px;height:12px;"></div>
+    <div class="ot-p" style="left:25%;animation-duration:6s;animation-delay:0.5s;"></div>
+    <div class="ot-p" style="left:38%;animation-duration:8s;animation-delay:2s;width:7px;height:7px;"></div>
+    <div class="ot-p" style="left:50%;animation-duration:11s;animation-delay:0.3s;width:14px;height:14px;border-color:rgba(255,121,0,.25);"></div>
+    <div class="ot-p" style="left:62%;animation-duration:7.5s;animation-delay:1.8s;"></div>
+    <div class="ot-p" style="left:73%;animation-duration:9.5s;animation-delay:0.8s;width:9px;height:9px;"></div>
+    <div class="ot-p" style="left:83%;animation-duration:6.5s;animation-delay:2.5s;width:11px;height:11px;border-color:rgba(255,121,0,.25);"></div>
+    <div class="ot-p" style="left:91%;animation-duration:8.5s;animation-delay:1s;"></div>
+  </div>
+
+  <!-- logo -->
+  <div class="ot-logo">
+    <img src="/wp-content/uploads/2022/04/Screenshot_20231009_092214-removebg-preview.png" alt="Orbistransitways">
+  </div>
+
+  <!-- track + truck -->
+  <div class="ot-track-wrap">
+    <div class="ot-pct" id="ot-pct">0%</div>
+    <div class="ot-road">
+      <div class="ot-fill" id="ot-fill"></div>
+    </div>
+    <!-- Truck SVG -->
+    <div class="ot-truck" id="ot-truck">
+      <svg width="68" height="38" viewBox="0 0 68 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- trailer body -->
+        <rect x="0" y="6" width="46" height="20" rx="2" fill="#D42B22"/>
+        <!-- trailer panel lines -->
+        <line x1="9"  y1="8"  x2="9"  y2="24" stroke="rgba(255,255,255,.18)" stroke-width="1"/>
+        <line x1="18" y1="8"  x2="18" y2="24" stroke="rgba(255,255,255,.18)" stroke-width="1"/>
+        <line x1="27" y1="8"  x2="27" y2="24" stroke="rgba(255,255,255,.18)" stroke-width="1"/>
+        <line x1="36" y1="8"  x2="36" y2="24" stroke="rgba(255,255,255,.18)" stroke-width="1"/>
+        <!-- cab -->
+        <rect x="46" y="10" width="20" height="16" rx="2" fill="#A81A12"/>
+        <!-- cab roof curve -->
+        <path d="M46 10 Q56 6 66 10" stroke="#8a1010" stroke-width="1.5" fill="none"/>
+        <!-- windshield -->
+        <rect x="51" y="13" width="11" height="8" rx="1.5" fill="#7EC8E3" opacity=".85"/>
+        <!-- headlight -->
+        <rect x="64" y="16" width="3" height="4" rx="1" fill="#FFDF42"/>
+        <!-- wheels -->
+        <circle cx="12" cy="28" r="5.5" fill="#202E30"/>
+        <circle cx="12" cy="28" r="2.5" fill="#555e5f"/>
+        <circle cx="35" cy="28" r="5.5" fill="#202E30"/>
+        <circle cx="35" cy="28" r="2.5" fill="#555e5f"/>
+        <circle cx="56" cy="28" r="5" fill="#202E30"/>
+        <circle cx="56" cy="28" r="2.2" fill="#555e5f"/>
+        <!-- exhaust smoke puffs (animated via CSS) -->
+        <circle class="ot-smoke" cx="48" cy="9" r="2" fill="rgba(255,255,255,.18)"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- tagline -->
+  <p class="ot-tagline">Delivering your world<span>.</span><span>.</span><span>.</span></p>
+
+</div>
+
+<script>
+(function(){
+  document.body.classList.add('ot-loading');
+  var el   = document.getElementById('ot-preloader');
+  var fill = document.getElementById('ot-fill');
+  var truck= document.getElementById('ot-truck');
+  var pctEl= document.getElementById('ot-pct');
+  var W    = 360; // track width px
+  var pct  = 0;
+
+  function setProgress(p){
+    if(p > 100) p = 100;
+    pct = p;
+    fill.style.width = p + '%';
+    // truck: from left=-22px (0%) to left=W-46px (100%)
+    var truckLeft = (p / 100) * (W - 46) - 22;
+    truck.style.left = truckLeft + 'px';
+    // percent label follows truck tip
+    var pctLeft = Math.max(0, truckLeft + 30);
+    pctEl.style.left = Math.min(pctLeft, W - 32) + 'px';
+    pctEl.textContent = Math.round(p) + '%';
+  }
+
+  // Smooth incremental fill
+  var interval = setInterval(function(){
+    var jump = Math.random() * 10 + 3;
+    setProgress(pct + jump);
+    if(pct >= 95){ clearInterval(interval); }
+  }, 130);
+
+  function dismiss(){
+    clearInterval(interval);
+    setProgress(100);
+    setTimeout(function(){
+      el.classList.add('ot-gone');
+      document.body.classList.remove('ot-loading');
+      setTimeout(function(){ el.style.display = 'none'; }, 750);
+    }, 350);
+  }
+
+  window.addEventListener('load', dismiss);
+  // Safety net: never block page longer than 4s
+  setTimeout(dismiss, 4000);
+})();
+</script>
+<!-- ══════════════════ END PRELOADER ══════════════════ -->
+
 <div class="custom-cursor" id="custom-cursor"></div>
 
 <!-- ── Language Switcher Bar ── -->
@@ -432,9 +646,28 @@ function googleTranslateElementInit() {
         });
     });
 
-    // Disable custom cursor on touch devices
+    // Custom cursor — move with mouse, pause on hover over interactive elements
     var cursor = document.getElementById('custom-cursor');
-    if (cursor && ('ontouchstart' in window || navigator.maxTouchPoints > 0)) {
+    if (cursor && !('ontouchstart' in window) && navigator.maxTouchPoints === 0) {
+        document.addEventListener('mousemove', function (e) {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top  = e.clientY + 'px';
+        });
+        document.addEventListener('mouseover', function (e) {
+            var t = e.target;
+            if (t.tagName === 'A' || t.tagName === 'BUTTON' || t.tagName === 'INPUT' ||
+                t.tagName === 'TEXTAREA' || t.tagName === 'SELECT' || t.closest('a, button')) {
+                cursor.classList.add('paused');
+            }
+        });
+        document.addEventListener('mouseout', function (e) {
+            var t = e.target;
+            if (t.tagName === 'A' || t.tagName === 'BUTTON' || t.tagName === 'INPUT' ||
+                t.tagName === 'TEXTAREA' || t.tagName === 'SELECT' || t.closest('a, button')) {
+                cursor.classList.remove('paused');
+            }
+        });
+    } else if (cursor) {
         cursor.style.display = 'none';
     }
 
