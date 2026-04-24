@@ -257,7 +257,7 @@ body.ot-loading{overflow:hidden;}
 }
 @keyframes otSlideU{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:translateY(0);}}
 
-/* ── percent label (follows truck) ── */
+/* ── percent label (follows lead vehicle) ── */
 .ot-pct{
   position:absolute;top:-26px;left:0;
   color:rgba(2,55,97,.70);
@@ -266,10 +266,10 @@ body.ot-loading{overflow:hidden;}
   transition:left .15s linear;
 }
 
-/* ── road ── */
+/* ── flight path ── */
 .ot-road{
-  height:7px;
-  background:rgba(2,55,97,.10);
+  height:6px;
+  background:repeating-linear-gradient(90deg, rgba(2,55,97,.12) 0 18px, rgba(2,55,97,0) 18px 30px);
   border-radius:4px;
   overflow:hidden;
   margin-top:40px;
@@ -282,11 +282,25 @@ body.ot-loading{overflow:hidden;}
   transition:width .15s linear;
 }
 
-/* ── truck ── */
+/* ── moving vehicles ── */
+.ot-plane,
 .ot-truck{
   position:absolute;
-  bottom:6px;left:-22px;
+  left:-22px;
   transition:left .15s linear;
+  transform-origin:center center;
+}
+.ot-plane{
+  bottom:16px;
+  transition:left .15s linear, transform .15s linear;
+}
+.ot-truck{
+  bottom:-8px;
+  animation:otTruckFloat 1.6s ease-in-out infinite;
+}
+@keyframes otTruckFloat{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-2px);}
 }
 
 /* ── tagline ── */
@@ -325,39 +339,42 @@ body.ot-loading{overflow:hidden;}
     <img src="/wp-content/uploads/2022/04/Screenshot_20231009_092214-removebg-preview.png" alt="Orbistransitways">
   </div>
 
-  <!-- track + truck -->
+  <!-- flight path + plane + truck -->
   <div class="ot-track-wrap">
     <div class="ot-pct" id="ot-pct">0%</div>
     <div class="ot-road">
       <div class="ot-fill" id="ot-fill"></div>
     </div>
+    <!-- Plane SVG -->
+    <div class="ot-plane" id="ot-plane">
+      <svg width="74" height="38" viewBox="0 0 74 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M6 20L33 16C35.5 15.6 39.2 14.2 41.5 12.7L55 4.2C56.6 3.2 58.5 3.1 60 4L62.1 5.3C63.4 6.1 63.4 7.9 62.1 8.7L51.5 15.3L66.4 14.4C67.8 14.3 69.1 14.9 70 16L72.4 18.9C73.2 19.9 72.5 21.4 71.2 21.5L51.2 23L61.7 29.2C63 30 63 31.8 61.7 32.6L59.7 33.8C58.3 34.7 56.5 34.7 55 33.8L41.6 25.7C39.2 24.3 35.5 22.9 33 22.5L6 18.6C4.6 18.4 3.5 17.2 3.5 15.8V22.3C3.5 20.9 4.6 19.8 6 20Z" fill="#D42B22"/>
+        <path d="M41.5 12.7L55 4.2C56.6 3.2 58.5 3.1 60 4L62.1 5.3C63.4 6.1 63.4 7.9 62.1 8.7L51.5 15.3" fill="#A81A12"/>
+        <path d="M27 18.1L11.5 20.2C10.2 20.4 9.2 19.4 9.2 18.2V16.7C9.2 15.5 10.2 14.5 11.5 14.7L27 16.8" fill="rgba(255,255,255,.18)"/>
+        <rect x="57.4" y="6.3" width="5.6" height="2.5" rx="1.2" fill="#7EC8E3" opacity=".92"/>
+        <circle cx="66.8" cy="19.1" r="1.5" fill="#FFDF42"/>
+        <path d="M3 19.4H0" stroke="rgba(2,55,97,.25)" stroke-width="1.6" stroke-linecap="round"/>
+        <path d="M8 19.4H5.5" stroke="rgba(2,55,97,.18)" stroke-width="1.4" stroke-linecap="round"/>
+      </svg>
+    </div>
     <!-- Truck SVG -->
     <div class="ot-truck" id="ot-truck">
-      <svg width="68" height="38" viewBox="0 0 68 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <!-- trailer body -->
+      <svg width="68" height="38" viewBox="0 0 68 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <rect x="0" y="6" width="46" height="20" rx="2" fill="#D42B22"/>
-        <!-- trailer panel lines -->
-        <line x1="9"  y1="8"  x2="9"  y2="24" stroke="rgba(255,255,255,.18)" stroke-width="1"/>
-        <line x1="18" y1="8"  x2="18" y2="24" stroke="rgba(255,255,255,.18)" stroke-width="1"/>
-        <line x1="27" y1="8"  x2="27" y2="24" stroke="rgba(255,255,255,.18)" stroke-width="1"/>
-        <line x1="36" y1="8"  x2="36" y2="24" stroke="rgba(255,255,255,.18)" stroke-width="1"/>
-        <!-- cab -->
+        <line x1="9" y1="8" x2="9" y2="24" stroke="rgba(255,255,255,.18)" stroke-width="1"/>
+        <line x1="18" y1="8" x2="18" y2="24" stroke="rgba(255,255,255,.18)" stroke-width="1"/>
+        <line x1="27" y1="8" x2="27" y2="24" stroke="rgba(255,255,255,.18)" stroke-width="1"/>
+        <line x1="36" y1="8" x2="36" y2="24" stroke="rgba(255,255,255,.18)" stroke-width="1"/>
         <rect x="46" y="10" width="20" height="16" rx="2" fill="#A81A12"/>
-        <!-- cab roof curve -->
         <path d="M46 10 Q56 6 66 10" stroke="#8a1010" stroke-width="1.5" fill="none"/>
-        <!-- windshield -->
         <rect x="51" y="13" width="11" height="8" rx="1.5" fill="#7EC8E3" opacity=".85"/>
-        <!-- headlight -->
         <rect x="64" y="16" width="3" height="4" rx="1" fill="#FFDF42"/>
-        <!-- wheels -->
         <circle cx="12" cy="28" r="5.5" fill="#202E30"/>
         <circle cx="12" cy="28" r="2.5" fill="#555e5f"/>
         <circle cx="35" cy="28" r="5.5" fill="#202E30"/>
         <circle cx="35" cy="28" r="2.5" fill="#555e5f"/>
         <circle cx="56" cy="28" r="5" fill="#202E30"/>
         <circle cx="56" cy="28" r="2.2" fill="#555e5f"/>
-        <!-- exhaust smoke puffs (animated via CSS) -->
-        <circle class="ot-smoke" cx="48" cy="9" r="2" fill="rgba(255,255,255,.18)"/>
       </svg>
     </div>
   </div>
@@ -372,6 +389,7 @@ body.ot-loading{overflow:hidden;}
   document.body.classList.add('ot-loading');
   var el   = document.getElementById('ot-preloader');
   var fill = document.getElementById('ot-fill');
+  var plane= document.getElementById('ot-plane');
   var truck= document.getElementById('ot-truck');
   var pctEl= document.getElementById('ot-pct');
   var W    = 360; // track width px
@@ -381,11 +399,15 @@ body.ot-loading{overflow:hidden;}
     if(p > 100) p = 100;
     pct = p;
     fill.style.width = p + '%';
-    // truck: from left=-22px (0%) to left=W-46px (100%)
-    var truckLeft = (p / 100) * (W - 46) - 22;
+    var planeLeft = (p / 100) * (W - 18) - 22;
+    var truckLeft = Math.max(-22, planeLeft - 34);
+    var climb = Math.min(34, p * 0.34);
+    var tilt = Math.min(18, p * 0.18);
+    plane.style.left = planeLeft + 'px';
+    plane.style.transform = 'translateY(-' + climb + 'px) rotate(-' + tilt + 'deg)';
     truck.style.left = truckLeft + 'px';
-    // percent label follows truck tip
-    var pctLeft = Math.max(0, truckLeft + 30);
+    // percent label follows plane nose
+    var pctLeft = Math.max(0, planeLeft + 30);
     pctEl.style.left = Math.min(pctLeft, W - 32) + 'px';
     pctEl.textContent = Math.round(p) + '%';
   }
