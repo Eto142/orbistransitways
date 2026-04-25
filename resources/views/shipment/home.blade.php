@@ -1181,8 +1181,8 @@ window.smartsupp||(function(d) {
         @endphp
         <div class="status-steps">
             @foreach($steps as $i => $step)
-            @if($i <= $currentStep)
-            <div class="step-item {{ $i < $currentStep ? 'done' : 'current' }}">
+            @if($i >= $currentStep)
+            <div class="step-item {{ $i === $currentStep ? 'current' : '' }}">
                 <div class="step-dot"><i class="fas {{ $step['icon'] }}"></i></div>
                 <span class="step-label">{{ $step['label'] }}</span>
             </div>
