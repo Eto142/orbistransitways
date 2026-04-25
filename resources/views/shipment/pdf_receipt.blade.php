@@ -21,7 +21,9 @@
 <body>
 
 <div class="header">
-    <img src="{{ public_path('logo.png') }}" class="logo" alt="Company Logo">
+    @if($logoData)
+    <img src="{{ $logoData }}" class="logo" alt="Company Logo">
+    @endif
     {{-- <h2>BRIGO MAP LOGISTICS</h2> --}}
     <p>Official Shipment Receipt</p>
 </div>

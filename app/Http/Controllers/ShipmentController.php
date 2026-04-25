@@ -81,7 +81,11 @@ class ShipmentController extends Controller
     $shipment = Shipment::create($validated);
 
     // Generate PDF
-    $pdf = PDF::loadView('shipment.pdf_receipt', compact('shipment'));
+    $logoPath = public_path('logo.png');
+    $logoData = file_exists($logoPath)
+        ? 'data:image/png;base64,' . base64_encode(file_get_contents($logoPath))
+        : null;
+    $pdf = PDF::loadView('shipment.pdf_receipt', compact('shipment', 'logoData'));
 
     // Save PDF to public storage
     $pdfPath = 'shipments/awb_' . $shipment->tracking_number . '.pdf';

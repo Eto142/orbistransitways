@@ -1,5 +1,13 @@
 ﻿@push('styles')
 <link rel='stylesheet' id='elementor-post-144-css' href='{{ asset('wp-content/uploads/elementor/css/post-14471bc.css') }}' media='all'/>
+<style>
+.elementor-144 .elementor-element.elementor-element-6a27bdd9:not(.elementor-motion-effects-element-type-background),
+.elementor-144 .elementor-element.elementor-element-6a27bdd9 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+    background-image: url('/assets/images/team.avif') !important;
+    background-position: center center;
+    background-size: cover;
+}
+</style>
 @endpush
 @include('partials.header')
 <div data-elementor-type="wp-page" data-elementor-id="144" class="elementor elementor-144" data-elementor-post-type="page">
@@ -43,9 +51,9 @@
     <iframe 
         loading="lazy" 
         onload="Wpfcll.r(this, true);" 
-        data-wpfc-original-src="https://maps.google.com/maps?q=Brandenburgische%20Str%2060%2C%20Bickenbach%2C%20Rheinland-Pfalz%2C%20Germany&t=m&z=10&output=embed&iwloc=near" 
-        title="Brandenburgische Str 60, Bickenbach, Rheinland-Pfalz, Germany" 
-        aria-label="Brandenburgische Str 60, Bickenbach, Rheinland-Pfalz, Germany">
+        data-wpfc-original-src="https://maps.google.com/maps?q=Sverres+gate+126%2C+Sandefjord%2C+Norway&t=m&z=14&output=embed&iwloc=near" 
+        title="Sverres gate 126, Sandefjord" 
+        aria-label="Sverres gate 126, Sandefjord">
     </iframe>
 </div>
 
@@ -70,7 +78,7 @@
 <div class="elementor-widget-container">
 <div class="elementor-divider"> <span class="elementor-divider-separator"> </span></div></div></div><div class="elementor-element elementor-element-46f79457 elementor-widget elementor-widget-heading" data-id="46f79457" data-element_type="widget" data-widget_type="heading.default">
 <div class="elementor-widget-container">
-<div class="elementor-heading-title elementor-size-default">We ship WorldWide. We have offices worldwide, and we operate with affiliation with many other companies round the world that share thesame interest. <br> Address: Head Office: Brandenburgische Str 60 Bickenbach, Rheinland-Pfalz, Germany<br>We are have offices round the global that is why we are able to ship wordwide</div></div></div><section class="elementor-section elementor-inner-section elementor-element elementor-element-7b3315f5 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="7b3315f5" data-element_type="section">
+<div class="elementor-heading-title elementor-size-default">We ship WorldWide. We have offices worldwide, and we operate with affiliation with many other companies round the world that share thesame interest. <br> Address: Head Office: Sverres gate 126, Sandefjord<br>We are have offices round the global that is why we are able to ship wordwide</div></div></div><section class="elementor-section elementor-inner-section elementor-element elementor-element-7b3315f5 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="7b3315f5" data-element_type="section">
 <div class="elementor-container elementor-column-gap-no">
 <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-6dcf1c29" data-id="6dcf1c29" data-element_type="column">
 <div class="elementor-widget-wrap elementor-element-populated">
