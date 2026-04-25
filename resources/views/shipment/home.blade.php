@@ -122,7 +122,7 @@
            TRACKING HERO BANNER
         ====================================================== */
         .tracking-hero {
-            background: linear-gradient(145deg, #0A1628 0%, #0D2045 35%, #102454 65%, #0F1F4A 100%);
+            background: linear-gradient(145deg, #0D0404 0%, #1F0808 35%, #2D1010 65%, #1A0606 100%);
             padding: 36px 0 56px;
             text-align: center;
             position: relative;
@@ -733,7 +733,7 @@
 
         /* --- Hero animated gradient & orbs --- */
         .tracking-hero {
-            background: linear-gradient(145deg, #0A1628 0%, #0D2045 35%, #091E42 65%, #0F1F4A 100%);
+            background: linear-gradient(145deg, #0D0404 0%, #1F0808 35%, #2D1010 65%, #1A0606 100%);
             background-size: 300% 300% !important;
             animation: heroGradient 14s ease infinite;
         }
@@ -752,7 +752,7 @@
         }
         .hero-orb-2 {
             width: 380px; height: 380px;
-            background: radial-gradient(circle, rgba(26,86,219,.18) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(176,30,22,.18) 0%, transparent 70%);
             bottom: -140px; left: -60px;
             animation: floatOrb 9s ease-in-out infinite reverse;
         }
