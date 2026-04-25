@@ -106,7 +106,7 @@
     <!-- CTA -->
     <div style="padding: 0 28px 28px; text-align:center;">
         <p style="color:#888; font-size:13px; margin-bottom:16px;">Track your shipment anytime using the link below:</p>
-        <a href="{{ url('/track?tracking_number=' . $shipment->tracking_number) }}"
+        <a href="{{ url('/track-now') }}"
            style="display:inline-block; background:#003366; color:#ffffff; padding:13px 32px; border-radius:6px; text-decoration:none; font-weight:700; font-size:15px; letter-spacing:.3px;">
             Track Shipment →
         </a>
