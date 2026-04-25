@@ -786,3 +786,61 @@ Our Priority.</a></span></div></div><div class="elementor-element elementor-elem
 <div class="elementor-element elementor-element-41c6d5c elementor-align-right elementor-widget elementor-widget-button" data-id="41c6d5c" data-element_type="widget" data-widget_type="button.default">
 <div class="elementor-widget-container">
 <div class="elementor-button-wrapper"> <a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-float" href="{{ url('/track-now') }}"> <span class="elementor-button-content-wrapper"> <span class="elementor-button-icon"> <i aria-hidden="true" class="fas fa-shipping-fast"></i> </span> <span class="elementor-button-text">Track now</span> </span> </a></div></div></div></div></div></div></section></div></div></section></div></div>
+
+<!-- ══════════════════════════════════════
+     BACK TO TOP BUTTON
+══════════════════════════════════════ -->
+<style>
+#ot-back-to-top {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #B01E16, #8C1510);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 20px rgba(176,30,22,.45);
+    cursor: pointer;
+    z-index: 9990;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(16px);
+    transition: opacity .3s ease, transform .3s ease, box-shadow .3s ease;
+}
+#ot-back-to-top.visible {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0);
+}
+#ot-back-to-top:hover {
+    background: linear-gradient(135deg, #D63A30, #B01E16);
+    box-shadow: 0 8px 28px rgba(176,30,22,.6);
+    transform: translateY(-3px);
+}
+@media (max-width: 576px) {
+    #ot-back-to-top { bottom: 20px; right: 16px; width: 42px; height: 42px; font-size: 1rem; }
+}
+</style>
+
+<button id="ot-back-to-top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+</button>
+
+<script>
+(function () {
+    var btn = document.getElementById('ot-back-to-top');
+    if (!btn) return;
+    window.addEventListener('scroll', function () {
+        btn.classList.toggle('visible', window.scrollY > 400);
+    }, { passive: true });
+    btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+})();
+</script>
