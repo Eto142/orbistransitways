@@ -87,9 +87,13 @@ class ShipmentController extends Controller
         : null;
     $pdf = PDF::loadView('shipment.pdf_receipt', compact('shipment', 'logoData'));
 
-    // Save PDF to public storage
+    // Save PDF to public storage (use file_put_contents to avoid finfo MIME detection)
     $pdfPath = 'shipments/awb_' . $shipment->tracking_number . '.pdf';
-    Storage::disk('public')->put($pdfPath, $pdf->output());
+    $fullPath = storage_path('app/public/' . $pdfPath);
+    if (!is_dir(dirname($fullPath))) {
+        mkdir(dirname($fullPath), 0775, true);
+    }
+    file_put_contents($fullPath, $pdf->output());
 
 //     // Pass data to session for modal + download
 //     return redirect()->route('admin.book')
