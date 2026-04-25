@@ -186,17 +186,17 @@ iframe.goog-te-banner-frame { display: none !important; height: 0 !important; }
 
 
 <!-- Smartsupp Live Chat script -->
-<!--<script type="text/javascript">-->
-<!--var _smartsupp = _smartsupp || {};-->
-<!--_smartsupp.key = '706f6ffc88e018262ee3ea0d4a95b3aa886dd0e3';-->
-<!--window.smartsupp||(function(d) {-->
-<!--  var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];-->
-<!--  s=d.getElementsByTagName('script')[0];c=d.createElement('script');-->
-<!--  c.type='text/javascript';c.charset='utf-8';c.async=true;-->
-<!--  c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);-->
-<!--})(document);-->
-<!--</script>-->
-<!--<noscript>Powered by <a href="https://www.smartsupp.com" target="_blank">Smartsupp</a></noscript>-->
+<script type="text/javascript">
+var _smartsupp = _smartsupp || {};
+_smartsupp.key = 'a5f7b19f8ab6edbd5b846f3df6c72877f2ede7bb';
+window.smartsupp||(function(d) {
+  var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+  s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+  c.type='text/javascript';c.charset='utf-8';c.async=true;
+  c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+})(document);
+</script>
+<noscript>Powered by <a href="https://www.smartsupp.com" target="_blank">Smartsupp</a></noscript>
 
 
 
