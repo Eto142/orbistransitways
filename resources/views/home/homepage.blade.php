@@ -314,38 +314,114 @@
 <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-502ba604" data-id="502ba604" data-element_type="column">
 <div class="elementor-widget-wrap elementor-element-populated">
 <div class="elementor-element elementor-element-1405e71d elementor-widget__width-auto elementor-invisible elementor-widget elementor-widget-image" data-id="1405e71d" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="image.default">
-<div class="elementor-widget-container"> <img decoding="async" width="521" height="399" src="/wp-content/uploads/2022/04/John-Adam.jpg" class="attachment-full size-full wp-image-55" alt="blank" data-wpfc-original-srcset="/wp-content/uploads/2022/04/John-Adam.jpg 521w, /wp-content/uploads/2022/04/John-Adam-300x230.jpg 300w" data-wpfc-original-sizes="(max-width: 521px) 100vw, 521px"/></div></div><div class="elementor-element elementor-element-7819ba3d elementor-view-stacked elementor-widget__width-auto elementor-widget-mobile__width-inherit elementor-shape-circle elementor-invisible elementor-widget elementor-widget-icon" data-id="7819ba3d" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;bounceInUp&quot;}" data-widget_type="icon.default">
+<div class="elementor-widget-container"> <img decoding="async" width="521" height="399" src="/assets/images/joe.avif" class="attachment-full size-full" alt="Joe T. James"/></div></div><div class="elementor-element elementor-element-7819ba3d elementor-view-stacked elementor-widget__width-auto elementor-widget-mobile__width-inherit elementor-shape-circle elementor-invisible elementor-widget elementor-widget-icon" data-id="7819ba3d" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;bounceInUp&quot;}" data-widget_type="icon.default">
 <div class="elementor-widget-container">
 <div class="elementor-icon-wrapper">
 <div class="elementor-icon"> <i aria-hidden="true" class="fas fa-quote-left"></i></div></div></div></div></div></div><div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-386f5408" data-id="386f5408" data-element_type="column">
 <div class="elementor-widget-wrap elementor-element-populated">
 <div class="elementor-element elementor-element-371ad373 elementor-invisible elementor-widget elementor-widget-text-editor" data-id="371ad373" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="text-editor.default">
-<div class="elementor-widget-container"> <p>When it comes to packaging, crating, and shipping, certain words carry a great deal of weight � words like experience, know-how, and integrity. Our long list of happy clients will tell you they rely on us because we�re unrivaled in these areas.</p></div></div><div class="elementor-element elementor-element-53566789 elementor-widget elementor-widget-heading" data-id="53566789" data-element_type="widget" data-widget_type="heading.default">
-<div class="elementor-widget-container"> <h4 class="elementor-heading-title elementor-size-default">Scotty F. George </h4></div></div><div class="elementor-element elementor-element-1aba2948 elementor-widget elementor-widget-heading" data-id="1aba2948" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container"> <p>When it comes to packaging, crating, and shipping, certain words carry a great deal of weight words like experience, know-how, and integrity. Our long list of happy clients will tell you they rely on us because we're unrivaled in these areas.</p></div></div><div class="elementor-element elementor-element-53566789 elementor-widget elementor-widget-heading" data-id="53566789" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container"> <h4 class="elementor-heading-title elementor-size-default">Joe T. James  </h4></div></div><div class="elementor-element elementor-element-1aba2948 elementor-widget elementor-widget-heading" data-id="1aba2948" data-element_type="widget" data-widget_type="heading.default">
 <div class="elementor-widget-container">
 <div class="elementor-heading-title elementor-size-default"> - Mega international</div></div></div></div></div></div></section></div></div></div></section>
-<section class="elementor-section elementor-top-section elementor-element elementor-element-605d56a8 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="605d56a8" data-element_type="section">
-<div class="elementor-container elementor-column-gap-no">
-<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-7a199517" data-id="7a199517" data-element_type="column">
-<div class="elementor-widget-wrap elementor-element-populated">
-<section class="elementor-section elementor-inner-section elementor-element elementor-element-4ab7ea71 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="4ab7ea71" data-element_type="section">
-<div class="elementor-container elementor-column-gap-no">
-<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-5f9319e1" data-id="5f9319e1" data-element_type="column">
-<div class="elementor-widget-wrap elementor-element-populated">
-<div class="elementor-element elementor-element-161d614e elementor-widget elementor-widget-heading" data-id="161d614e" data-element_type="widget" data-widget_type="heading.default">
-<div class="elementor-widget-container"> <h5 class="elementor-heading-title elementor-size-default">news</h5></div></div><div class="elementor-element elementor-element-76480e3b elementor-invisible elementor-widget elementor-widget-heading" data-id="76480e3b" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInLeft&quot;}" data-widget_type="heading.default">
-<div class="elementor-widget-container"> <h2 class="elementor-heading-title elementor-size-default">Orbistransitways News</h2></div></div><div class="elementor-element elementor-element-2ece5782 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="2ece5782" data-element_type="widget" data-widget_type="divider.default">
-<div class="elementor-widget-container">
-<div class="elementor-divider"> <span class="elementor-divider-separator"> </span></div></div></div></div></div><div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-5eec1e5d" data-id="5eec1e5d" data-element_type="column">
-<div class="elementor-widget-wrap elementor-element-populated">
-<div class="elementor-element elementor-element-32041992 elementor-align-right elementor-invisible elementor-widget elementor-widget-button" data-id="32041992" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInRight&quot;}" data-widget_type="button.default">
-<div class="elementor-widget-container">
-<div class="elementor-button-wrapper"> <a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-float" href="about-us/index.html"> <span class="elementor-button-content-wrapper"> <span class="elementor-button-icon"> <i aria-hidden="true" class="fas fa-angle-double-right"></i> </span> <span class="elementor-button-text">see all news</span> </span> </a></div></div></div></div></div></div></section>
-<section class="elementor-section elementor-inner-section elementor-element elementor-element-49fe3acd elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="49fe3acd" data-element_type="section">
-<div class="elementor-container elementor-column-gap-no">
-<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-41534dc6" data-id="41534dc6" data-element_type="column">
-<div class="elementor-widget-wrap elementor-element-populated"></div></div><div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-4c0fc135" data-id="4c0fc135" data-element_type="column">
-<div class="elementor-widget-wrap elementor-element-populated"></div></div></div></section></div></div></div></section></div>
+<!-- Testimonials Section -->
+<section class="elementor-section elementor-top-section elementor-element elementor-section-boxed elementor-section-height-default" style="background:#f4f6f9;padding:70px 0;">
+    <style>
+        .ot-testimonials-wrap{max-width:1200px;margin:0 auto;padding:0 20px;}
+        .ot-testimonials-header{text-align:center;margin-bottom:50px;}
+        .ot-testimonials-header h5{color:#f4a306;font-size:13px;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;}
+        .ot-testimonials-header h2{font-size:32px;font-weight:700;color:#1a1a2e;margin-bottom:14px;}
+        .ot-testimonials-header .ot-divider{width:60px;height:3px;background:#f4a306;margin:0 auto;}
+        .ot-testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;}
+        @media(max-width:900px){.ot-testimonials-grid{grid-template-columns:1fr 1fr;}}
+        @media(max-width:600px){.ot-testimonials-grid{grid-template-columns:1fr;}}
+        .ot-testimonial-card{background:#fff;border-radius:10px;padding:32px 28px;box-shadow:0 4px 20px rgba(0,0,0,0.07);position:relative;display:flex;flex-direction:column;gap:16px;transition:transform 0.2s;}
+        .ot-testimonial-card:hover{transform:translateY(-4px);}
+        .ot-testimonial-stars{color:#f4a306;font-size:16px;letter-spacing:2px;}
+        .ot-testimonial-text{font-size:15px;color:#555;line-height:1.75;font-style:italic;flex:1;}
+        .ot-testimonial-text::before{content:'\201C';font-size:48px;color:#f4a306;line-height:0;vertical-align:-18px;margin-right:4px;}
+        .ot-testimonial-author{display:flex;align-items:center;gap:14px;margin-top:10px;}
+        .ot-testimonial-avatar{width:48px;height:48px;border-radius:50%;background:#1a1a2e;color:#fff;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;flex-shrink:0;}
+        .ot-testimonial-name{font-weight:700;color:#1a1a2e;font-size:15px;}
+        .ot-testimonial-role{font-size:13px;color:#f4a306;}
+    </style>
+    <div class="ot-testimonials-wrap">
+        <div class="ot-testimonials-header">
+            <h5>Testimonials</h5>
+            <h2>What Our Clients Say</h2>
+            <div class="ot-divider"></div>
+        </div>
+        <div class="ot-testimonials-grid">
+            <div class="ot-testimonial-card">
+                <div class="ot-testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="ot-testimonial-text">Orbistransitways handled our international shipment flawlessly. Real-time tracking kept us informed every step of the way, and our goods arrived two days ahead of schedule. Absolutely outstanding service.</p>
+                <div class="ot-testimonial-author">
+                    <div class="ot-testimonial-avatar">JM</div>
+                    <div>
+                        <div class="ot-testimonial-name">James Mitchell</div>
+                        <div class="ot-testimonial-role">Operations Manager, NordTech AS</div>
+                    </div>
+                </div>
+            </div>
+            <div class="ot-testimonial-card">
+                <div class="ot-testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="ot-testimonial-text">I was nervous about shipping my pet internationally, but the team at Orbistransitways made the entire process stress-free. They communicated every detail and my dog arrived safe and happy. Highly recommend!</p>
+                <div class="ot-testimonial-author">
+                    <div class="ot-testimonial-avatar">SL</div>
+                    <div>
+                        <div class="ot-testimonial-name">Sofia Larsen</div>
+                        <div class="ot-testimonial-role">Private Customer, Oslo</div>
+                    </div>
+                </div>
+            </div>
+            <div class="ot-testimonial-card">
+                <div class="ot-testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="ot-testimonial-text">We have been partnering with Orbistransitways for over three years for all our freight needs. Their dedication to meeting deadlines and their professional team have made them an invaluable part of our supply chain.</p>
+                <div class="ot-testimonial-author">
+                    <div class="ot-testimonial-avatar">RJ</div>
+                    <div>
+                        <div class="ot-testimonial-name">Richard J</div>
+                        <div class="ot-testimonial-role">Supply Chain Director, GlobalMart Ltd</div>
+                    </div>
+                </div>
+            </div>
+            <div class="ot-testimonial-card">
+                <div class="ot-testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+                <p class="ot-testimonial-text">The air freight service was exactly what we needed for our time-sensitive cargo. Competitive pricing and a transparent process from booking to delivery. We will definitely use them again.</p>
+                <div class="ot-testimonial-author">
+                    <div class="ot-testimonial-avatar">AM</div>
+                    <div>
+                        <div class="ot-testimonial-name">Anna M&#252;ller</div>
+                        <div class="ot-testimonial-role">Logistics Coordinator, EuroMed GmbH</div>
+                    </div>
+                </div>
+            </div>
+            <div class="ot-testimonial-card">
+                <div class="ot-testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="ot-testimonial-text">Moving to Norway was daunting, but Orbistransitways handled our household belongings with exceptional care. Every item arrived in perfect condition. The team was responsive and professional throughout.</p>
+                <div class="ot-testimonial-author">
+                    <div class="ot-testimonial-avatar">TC</div>
+                    <div>
+                        <div class="ot-testimonial-name">Thomas Chen</div>
+                        <div class="ot-testimonial-role">Private Customer, Sandefjord</div>
+                    </div>
+                </div>
+            </div>
+            <div class="ot-testimonial-card">
+                <div class="ot-testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="ot-testimonial-text">From custom shipping crates to final-mile delivery, Orbistransitways covered everything for our exhibition equipment. They truly deliver confidence exactly as they promise. A partner we trust completely.</p>
+                <div class="ot-testimonial-author">
+                    <div class="ot-testimonial-avatar">PB</div>
+                    <div>
+                        <div class="ot-testimonial-name">Priya Bhandari</div>
+                        <div class="ot-testimonial-role">Events Manager, ArtWorld Exhibitions</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 {{-- ===== AFFILIATED PARTNERS ===== --}}
 <style>
 .ot-partners-section {
@@ -476,7 +552,7 @@
             <div class="ot-partner-item"><div class="ot-wordmark ceva">CEVA</div><div class="ot-partner-sub">Contract Logistics</div></div>
             <div class="ot-partner-item"><div class="ot-wordmark dsv">DSV</div><div class="ot-partner-sub">Road, Air &amp; Sea</div></div>
             <div class="ot-partner-item"><div class="ot-wordmark geodis">GEODIS</div><div class="ot-partner-sub">Supply Chain</div></div>
-            <!-- Set B — duplicate for seamless loop -->
+            <!-- Set B duplicate for seamless loop -->
             <div class="ot-partner-item"><div class="ot-wordmark dhl">DHL</div><div class="ot-partner-sub">Express &amp; Freight</div></div>
             <div class="ot-partner-item"><div class="ot-wordmark fedex">FedEx</div><div class="ot-partner-sub">Global Courier</div></div>
             <div class="ot-partner-item"><div class="ot-wordmark ups">UPS</div><div class="ot-partner-sub">United Parcel Service</div></div>
@@ -492,4 +568,5 @@
         </div>
     </div>
 </section>
+
 @include('partials.footer')
