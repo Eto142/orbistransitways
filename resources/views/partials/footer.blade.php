@@ -5,7 +5,7 @@
 <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-40465806" data-id="40465806" data-element_type="column">
 <div class="elementor-widget-wrap elementor-element-populated">
 <div class="elementor-element elementor-element-1fdb3f43 elementor-invisible elementor-widget elementor-widget-image" data-id="1fdb3f43" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="image.default">
-<div class="elementor-widget-container"> <img src="" width="527" height="151"  class="attachment-large size-large wp-image-1034" alt="blank"/></div></div><div class="elementor-element elementor-element-2305bf81 elementor-widget elementor-widget-heading" data-id="2305bf81" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container"> <img src="/wp-content/uploads/2022/04/Screenshot_20231009_092214-removebg-preview.png" width="527" height="151"  class="attachment-large size-large wp-image-1034" alt="Orbistransitways"/></div></div><div class="elementor-element elementor-element-2305bf81 elementor-widget elementor-widget-heading" data-id="2305bf81" data-element_type="widget" data-widget_type="heading.default">
 <div class="elementor-widget-container">
 <div class="elementor-heading-title elementor-size-default">Address: Head Office: Sverres gate 126, Sandefjord<br>We are have offices round the global that is why we are able to ship wordwide</div></div></div><div class="elementor-element elementor-element-46eac7b7 elementor-widget-mobile__width-initial elementor-widget elementor-widget-icon-box" data-id="46eac7b7" data-element_type="widget" data-widget_type="icon-box.default">
 <div class="elementor-widget-container">
@@ -64,7 +64,7 @@
 <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5f9aec31" data-id="5f9aec31" data-element_type="column">
 <div class="elementor-widget-wrap elementor-element-populated">
 <div class="elementor-element elementor-element-49ed1a93 elementor-widget elementor-widget-image" data-id="49ed1a93" data-element_type="widget" data-widget_type="image.default">
-<div class="elementor-widget-container"> <img src="" width="378" height="500"  class="attachment-large size-large wp-image-110" alt="blank"/></div></div></div></div><div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-6c144820" data-id="6c144820" data-element_type="column">
+<div class="elementor-widget-container"> <img src="/wp-content/uploads/2022/04/bg-popup.jpg" width="378" height="500"  class="attachment-large size-large wp-image-110" alt="blank"/></div></div></div></div><div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-6c144820" data-id="6c144820" data-element_type="column">
 <div class="elementor-widget-wrap elementor-element-populated">
 <div class="elementor-element elementor-element-558521d1 elementor-invisible elementor-widget elementor-widget-heading" data-id="558521d1" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
 <div class="elementor-widget-container"> <h2 class="elementor-heading-title elementor-size-default">BE THE FIRST</h2></div></div><div class="elementor-element elementor-element-456d2f77 elementor-widget elementor-widget-heading" data-id="456d2f77" data-element_type="widget" data-widget_type="heading.default">
@@ -76,6 +76,8 @@
 
 
 <script id="wp-i18n-js-after">wp.i18n.setLocaleData({ 'text direction\u0004ltr': [ 'ltr' ] });</script>
+<link rel="stylesheet" type="text/css" href="wp-content/cache/wpfc-minified/ermxpxp5/1y6mw.css" media="all"/>
+<link rel="stylesheet" type="text/css" href="wp-content/cache/wpfc-minified/2cqlia2o/1y6mf.css" media="all"/>
 </body>
 
 

@@ -1,4 +1,5 @@
 ﻿@push('styles')
+<link rel='stylesheet' id='elementor-post-625-css' href='{{ asset('wp-content/uploads/elementor/css/post-625553a.css') }}' media='all'/>
 @endpush
 @include('partials.header')
 <div data-elementor-type="wp-page" data-elementor-id="625" class="elementor elementor-625" data-elementor-post-type="page">
