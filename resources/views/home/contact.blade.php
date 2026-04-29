@@ -1,5 +1,4 @@
 ﻿@push('styles')
-<link rel='stylesheet' id='elementor-post-144-css' href='{{ asset('wp-content/uploads/elementor/css/post-14471bc.css') }}' media='all'/>
 <style>
 .elementor-144 .elementor-element.elementor-element-6a27bdd9:not(.elementor-motion-effects-element-type-background),
 .elementor-144 .elementor-element.elementor-element-6a27bdd9 > .elementor-motion-effects-container > .elementor-motion-effects-layer {

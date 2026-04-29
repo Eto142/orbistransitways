@@ -1,5 +1,4 @@
 ﻿@push('styles')
-<link rel='stylesheet' id='elementor-post-229-css' href='{{ asset('wp-content/uploads/elementor/css/post-229ee66.css') }}' media='all'/>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 <style>
