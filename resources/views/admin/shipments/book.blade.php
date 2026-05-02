@@ -361,18 +361,85 @@
                            placeholder="e.g. Prepaid, Cash, Credit"
                            value="{{ old('payment_mode') }}">
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2">
+                    <label class="form-label fw-semibold">Currency</label>
+                    @php
+                    $allCurrencies = [
+                        'USD'=>'$ USD – US Dollar','EUR'=>'€ EUR – Euro','GBP'=>'£ GBP – British Pound',
+                        'JPY'=>'¥ JPY – Japanese Yen','CNY'=>'¥ CNY – Chinese Yuan','INR'=>'₹ INR – Indian Rupee',
+                        'CAD'=>'$ CAD – Canadian Dollar','AUD'=>'$ AUD – Australian Dollar','CHF'=>'Fr CHF – Swiss Franc',
+                        'HKD'=>'$ HKD – Hong Kong Dollar','SGD'=>'$ SGD – Singapore Dollar','NZD'=>'$ NZD – New Zealand Dollar',
+                        'MXN'=>'$ MXN – Mexican Peso','BRL'=>'R$ BRL – Brazilian Real','ARS'=>'$ ARS – Argentine Peso',
+                        'CLP'=>'$ CLP – Chilean Peso','COP'=>'$ COP – Colombian Peso','PEN'=>'S/ PEN – Peruvian Sol',
+                        'UYU'=>'$ UYU – Uruguayan Peso','BOB'=>'Bs BOB – Bolivian Boliviano','PYG'=>'₲ PYG – Paraguayan Guaraní',
+                        'VES'=>'Bs VES – Venezuelan Bolívar','GTQ'=>'Q GTQ – Guatemalan Quetzal','CRC'=>'₡ CRC – Costa Rican Colón',
+                        'DOP'=>'$ DOP – Dominican Peso','JMD'=>'$ JMD – Jamaican Dollar','TTD'=>'$ TTD – Trinidad Dollar',
+                        'BBD'=>'$ BBD – Barbadian Dollar','BSD'=>'$ BSD – Bahamian Dollar','AED'=>'د.إ AED – UAE Dirham',
+                        'SAR'=>'﷼ SAR – Saudi Riyal','QAR'=>'﷼ QAR – Qatari Riyal','KWD'=>'د.ك KWD – Kuwaiti Dinar',
+                        'BHD'=>'.د.ب BHD – Bahraini Dinar','OMR'=>'﷼ OMR – Omani Rial','JOD'=>'د.ا JOD – Jordanian Dinar',
+                        'ILS'=>'₪ ILS – Israeli Shekel','TRY'=>'₺ TRY – Turkish Lira','EGP'=>'£ EGP – Egyptian Pound',
+                        'LBP'=>'£ LBP – Lebanese Pound','IQD'=>'ع.د IQD – Iraqi Dinar','IRR'=>'﷼ IRR – Iranian Rial',
+                        'PKR'=>'₨ PKR – Pakistani Rupee','BDT'=>'৳ BDT – Bangladeshi Taka','LKR'=>'₨ LKR – Sri Lankan Rupee',
+                        'NPR'=>'₨ NPR – Nepalese Rupee','MMK'=>'K MMK – Myanmar Kyat','THB'=>'฿ THB – Thai Baht',
+                        'VND'=>'₫ VND – Vietnamese Dong','IDR'=>'Rp IDR – Indonesian Rupiah','MYR'=>'RM MYR – Malaysian Ringgit',
+                        'PHP'=>'₱ PHP – Philippine Peso','KRW'=>'₩ KRW – South Korean Won','TWD'=>'$ TWD – Taiwan Dollar',
+                        'HUF'=>'Ft HUF – Hungarian Forint','CZK'=>'Kč CZK – Czech Koruna','PLN'=>'zł PLN – Polish Zloty',
+                        'RON'=>'lei RON – Romanian Leu','BGN'=>'лв BGN – Bulgarian Lev','HRK'=>'kn HRK – Croatian Kuna',
+                        'RSD'=>'дин RSD – Serbian Dinar','BAM'=>'KM BAM – Bosnia Mark','MKD'=>'ден MKD – Macedonian Denar',
+                        'ALL'=>'L ALL – Albanian Lek','DKK'=>'kr DKK – Danish Krone','SEK'=>'kr SEK – Swedish Krona',
+                        'NOK'=>'kr NOK – Norwegian Krone','ISK'=>'kr ISK – Icelandic Króna','RUB'=>'₽ RUB – Russian Ruble',
+                        'UAH'=>'₴ UAH – Ukrainian Hryvnia','KZT'=>'₸ KZT – Kazakhstani Tenge','GEL'=>'₾ GEL – Georgian Lari',
+                        'AMD'=>'֏ AMD – Armenian Dram','AZN'=>'₼ AZN – Azerbaijani Manat','BYN'=>'Br BYN – Belarusian Ruble',
+                        'MDL'=>'L MDL – Moldovan Leu','UZS'=>'лв UZS – Uzbekistani Som','TJS'=>'SM TJS – Tajikistani Somoni',
+                        'TMT'=>'T TMT – Turkmenistani Manat','KGS'=>'лв KGS – Kyrgyzstani Som','MNT'=>'₮ MNT – Mongolian Tögrög',
+                        'NGN'=>'₦ NGN – Nigerian Naira','ZAR'=>'R ZAR – South African Rand','KES'=>'Ksh KES – Kenyan Shilling',
+                        'GHS'=>'₵ GHS – Ghanaian Cedi','ETB'=>'Br ETB – Ethiopian Birr','TZS'=>'Sh TZS – Tanzanian Shilling',
+                        'UGX'=>'Sh UGX – Ugandan Shilling','RWF'=>'Fr RWF – Rwandan Franc','MAD'=>'د.م. MAD – Moroccan Dirham',
+                        'DZD'=>'دج DZD – Algerian Dinar','TND'=>'د.ت TND – Tunisian Dinar','LYD'=>'ل.د LYD – Libyan Dinar',
+                        'XOF'=>'Fr XOF – West African CFA','XAF'=>'Fr XAF – Central African CFA','ZMW'=>'ZK ZMW – Zambian Kwacha',
+                        'MZN'=>'MT MZN – Mozambican Metical','AOA'=>'Kz AOA – Angolan Kwanza','BWP'=>'P BWP – Botswana Pula',
+                        'NAD'=>'$ NAD – Namibian Dollar','MUR'=>'₨ MUR – Mauritian Rupee','SCR'=>'₨ SCR – Seychellois Rupee',
+                        'MGA'=>'Ar MGA – Malagasy Ariary','ZWL'=>'$ ZWL – Zimbabwean Dollar','CDF'=>'Fr CDF – Congolese Franc',
+                        'SDG'=>'£ SDG – Sudanese Pound','SOS'=>'Sh SOS – Somali Shilling','DJF'=>'Fr DJF – Djiboutian Franc',
+                        'ERN'=>'Nkf ERN – Eritrean Nakfa','GMD'=>'D GMD – Gambian Dalasi','GNF'=>'Fr GNF – Guinean Franc',
+                        'SLL'=>'Le SLL – Sierra Leonean Leone','LRD'=>'$ LRD – Liberian Dollar','CVE'=>'$ CVE – Cape Verdean Escudo',
+                        'STN'=>'Db STN – São Tomé Dobra','KMF'=>'Fr KMF – Comorian Franc','MWK'=>'MK MWK – Malawian Kwacha',
+                        'LSL'=>'L LSL – Lesotho Loti','SZL'=>'L SZL – Swazi Lilangeni','BIF'=>'Fr BIF – Burundian Franc',
+                        'AFN'=>'؋ AFN – Afghan Afghani','MVR'=>'Rf MVR – Maldivian Rufiyaa','BTN'=>'Nu BTN – Bhutanese Ngultrum',
+                        'KHR'=>'៛ KHR – Cambodian Riel','LAK'=>'₭ LAK – Lao Kip','BND'=>'$ BND – Brunei Dollar',
+                        'PGK'=>'K PGK – Papua New Guinea Kina','FJD'=>'$ FJD – Fijian Dollar','SBD'=>'$ SBD – Solomon Islands Dollar',
+                        'VUV'=>'Vt VUV – Vanuatu Vatu','WST'=>'T WST – Samoan Tālā','TOP'=>'T$ TOP – Tongan Paʻanga',
+                        'XPF'=>'Fr XPF – CFP Franc','AWG'=>'ƒ AWG – Aruban Florin','ANG'=>'ƒ ANG – Netherlands Antillean Guilder',
+                        'SRD'=>'$ SRD – Surinamese Dollar','GYD'=>'$ GYD – Guyanese Dollar','HTG'=>'G HTG – Haitian Gourde',
+                        'NIO'=>'C$ NIO – Nicaraguan Córdoba','HNL'=>'L HNL – Honduran Lempira','PAB'=>'B/. PAB – Panamanian Balboa',
+                        'CUP'=>'$ CUP – Cuban Peso','BZD'=>'$ BZD – Belize Dollar','XCD'=>'$ XCD – East Caribbean Dollar',
+                        'KYD'=>'$ KYD – Cayman Islands Dollar','BMD'=>'$ BMD – Bermudian Dollar',
+                    ];
+                    @endphp
+                    <select name="currency" class="form-select" id="currencySelect">
+                        @foreach($allCurrencies as $code => $label)
+                            <option value="{{ $code }}" {{ old('currency', 'USD') === $code ? 'selected' : '' }}>{{ $label }}</option>
+                        @endforeach
+                        <option value="__other__" {{ old('currency') === '__other__' ? 'selected' : '' }}>✏️ Other (type below)…</option>
+                    </select>
+                    <input type="text" id="currencyCustomInput" name="currency_custom"
+                           class="form-control mt-1 font-monospace text-uppercase"
+                           placeholder="e.g. XYZ – My Currency"
+                           style="display:none;" maxlength="20">
+                    <div class="form-text" id="currencyCustomHelp" style="display:none;">Enter a 3-letter code or short label. This will be used as-is.</div>
+                </div>
+                <div class="col-md-2">
                     <label class="form-label fw-semibold">Declared Value</label>
                     <div class="input-group">
-                        <span class="input-group-text">$</span>
+                        <span class="input-group-text fw-semibold" id="valueCurrencyPrefix">{{ old('currency', 'USD') }}</span>
                         <input name="value" type="text" class="form-control" placeholder="500.00"
                                value="{{ old('value') }}">
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <label class="form-label fw-semibold">Total Freight</label>
                     <div class="input-group">
-                        <span class="input-group-text">$</span>
+                        <span class="input-group-text fw-semibold" id="freightCurrencyPrefix">{{ old('currency', 'USD') }}</span>
                         <input name="total_freight" type="text" class="form-control" placeholder="150.00"
                                value="{{ old('total_freight') }}">
                     </div>
@@ -574,6 +641,38 @@ function validateCurrentStep() {
 document.getElementById('wz-next').addEventListener('click', () => { if (validateCurrentStep()) goToStep(currentStep+1); });
 document.getElementById('wz-prev').addEventListener('click', () => { if (currentStep>1) goToStep(currentStep-1); });
 document.getElementById('bookingForm').addEventListener('input', e => { if (e.target.value.trim()) e.target.classList.remove('is-invalid'); });
+document.getElementById('currencySelect').addEventListener('change', function () {
+    const code = this.value;
+    const customWrap = document.getElementById('currencyCustomInput');
+    const customHelp = document.getElementById('currencyCustomHelp');
+    if (code === '__other__') {
+        customWrap.style.display = 'block';
+        customHelp.style.display = 'block';
+        customWrap.focus();
+    } else {
+        customWrap.style.display = 'none';
+        customHelp.style.display = 'none';
+        customWrap.value = '';
+        document.getElementById('valueCurrencyPrefix').textContent   = code;
+        document.getElementById('freightCurrencyPrefix').textContent = code;
+    }
+});
+document.getElementById('currencyCustomInput').addEventListener('input', function () {
+    const val = this.value.trim().toUpperCase() || '?';
+    document.getElementById('valueCurrencyPrefix').textContent   = val;
+    document.getElementById('freightCurrencyPrefix').textContent = val;
+});
+document.getElementById('bookingForm').addEventListener('submit', function () {
+    const sel = document.getElementById('currencySelect');
+    if (sel.value === '__other__') {
+        const custom = document.getElementById('currencyCustomInput').value.trim().toUpperCase();
+        // inject a hidden input so the real `currency` field carries the custom value
+        const h = document.createElement('input');
+        h.type = 'hidden'; h.name = 'currency'; h.value = custom || 'USD';
+        this.appendChild(h);
+        sel.disabled = true; // prevent duplicate field
+    }
+});
 </script>
 
 <style>

@@ -181,11 +181,11 @@
                 <div class="row text-center">
                     <div class="col-md-3">
                         <p class="text-muted mb-1">Declared Value</p>
-                        <h6>{{ $shipment->value ?? 'N/A' }}</h6>
+                        <h6>@if($shipment->value)<span class="badge bg-secondary me-1" style="font-size:.7rem;">{{ $shipment->currency ?? 'USD' }}</span>{{ $shipment->value }}@else N/A @endif</h6>
                     </div>
                     <div class="col-md-3">
                         <p class="text-muted mb-1">Total Freight</p>
-                        <h6>{{ $shipment->total_freight ?? 'N/A' }}</h6>
+                        <h6>@if($shipment->total_freight)<span class="badge bg-secondary me-1" style="font-size:.7rem;">{{ $shipment->currency ?? 'USD' }}</span>{{ $shipment->total_freight }}@else N/A @endif</h6>
                     </div>
                     <div class="col-md-3">
                         <p class="text-muted mb-1">Payment Mode</p>

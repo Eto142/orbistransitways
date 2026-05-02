@@ -93,11 +93,11 @@
             <th>Description</th><td colspan="3">{{ $shipment->description }}</td>
         </tr>
         <tr>
-            <th>Total Freight</th><td>{{ $shipment->total_freight }}</td>
+            <th>Total Freight</th><td>{{ $shipment->currency ?? 'USD' }} {{ $shipment->total_freight }}</td>
             <th>Payment Mode</th><td>{{ $shipment->payment_mode ?? 'N/A' }}</td>
         </tr>
         <tr>
-            <th>Declared Value</th><td>{{ $shipment->value }}</td>
+            <th>Declared Value</th><td>{{ $shipment->currency ?? 'USD' }} {{ $shipment->value }}</td>
             <th>Comments</th><td>{{ $shipment->comments ?? 'None' }}</td>
         </tr>
     </table>

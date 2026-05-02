@@ -1430,9 +1430,9 @@ window.smartsupp||(function(d) {
                     <div class="info-row"><span class="info-label">Total Weight</span><span class="info-value">{{ $shipment->weight }}</span></div>
                     <div class="info-row"><span class="info-label">Shipment Type</span><span class="info-value">{{ $shipment->shipment_type }}</span></div>
                     <div class="info-row"><span class="info-label">Product</span><span class="info-value">{{ $shipment->product }}</span></div>
-                    <div class="info-row"><span class="info-label">Value</span><span class="info-value">{{ $shipment->value }}</span></div>
+                    <div class="info-row"><span class="info-label">Value</span><span class="info-value">{{ $shipment->currency ?? 'USD' }} {{ $shipment->value }}</span></div>
                     <div class="info-row"><span class="info-label">Payment Mode</span><span class="info-value">{{ $shipment->payment_mode }}</span></div>
-                    <div class="info-row"><span class="info-label">Total Freight</span><span class="info-value">{{ $shipment->total_freight }}</span></div>
+                    <div class="info-row"><span class="info-label">Total Freight</span><span class="info-value">{{ $shipment->currency ?? 'USD' }} {{ $shipment->total_freight }}</span></div>
                 </div>
             </div>
 

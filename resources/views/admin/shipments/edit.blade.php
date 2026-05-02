@@ -231,18 +231,95 @@
                 </div>
 
                 <div class="col-md-3">
-                    <label class="form-label">Value</label>
-                    <input name="value" type="text" class="form-control" value="{{ old('value', $shipment->value) }}">
-                </div>
-
-                <div class="col-md-3">
                     <label class="form-label">Payment Mode</label>
                     <input name="payment_mode" type="text" class="form-control" value="{{ old('payment_mode', $shipment->payment_mode) }}">
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-md-2">
+                    <label class="form-label">Currency</label>
+                    @php
+                    $allCurrencies = [
+                        'USD'=>'$ USD – US Dollar','EUR'=>'€ EUR – Euro','GBP'=>'£ GBP – British Pound',
+                        'JPY'=>'¥ JPY – Japanese Yen','CNY'=>'¥ CNY – Chinese Yuan','INR'=>'₹ INR – Indian Rupee',
+                        'CAD'=>'$ CAD – Canadian Dollar','AUD'=>'$ AUD – Australian Dollar','CHF'=>'Fr CHF – Swiss Franc',
+                        'HKD'=>'$ HKD – Hong Kong Dollar','SGD'=>'$ SGD – Singapore Dollar','NZD'=>'$ NZD – New Zealand Dollar',
+                        'MXN'=>'$ MXN – Mexican Peso','BRL'=>'R$ BRL – Brazilian Real','ARS'=>'$ ARS – Argentine Peso',
+                        'CLP'=>'$ CLP – Chilean Peso','COP'=>'$ COP – Colombian Peso','PEN'=>'S/ PEN – Peruvian Sol',
+                        'UYU'=>'$ UYU – Uruguayan Peso','BOB'=>'Bs BOB – Bolivian Boliviano','PYG'=>'₲ PYG – Paraguayan Guaraní',
+                        'VES'=>'Bs VES – Venezuelan Bolívar','GTQ'=>'Q GTQ – Guatemalan Quetzal','CRC'=>'₡ CRC – Costa Rican Colón',
+                        'DOP'=>'$ DOP – Dominican Peso','JMD'=>'$ JMD – Jamaican Dollar','TTD'=>'$ TTD – Trinidad Dollar',
+                        'BBD'=>'$ BBD – Barbadian Dollar','BSD'=>'$ BSD – Bahamian Dollar','AED'=>'د.إ AED – UAE Dirham',
+                        'SAR'=>'﷼ SAR – Saudi Riyal','QAR'=>'﷼ QAR – Qatari Riyal','KWD'=>'د.ك KWD – Kuwaiti Dinar',
+                        'BHD'=>'.د.ب BHD – Bahraini Dinar','OMR'=>'﷼ OMR – Omani Rial','JOD'=>'د.ا JOD – Jordanian Dinar',
+                        'ILS'=>'₪ ILS – Israeli Shekel','TRY'=>'₺ TRY – Turkish Lira','EGP'=>'£ EGP – Egyptian Pound',
+                        'LBP'=>'£ LBP – Lebanese Pound','IQD'=>'ع.د IQD – Iraqi Dinar','IRR'=>'﷼ IRR – Iranian Rial',
+                        'PKR'=>'₨ PKR – Pakistani Rupee','BDT'=>'৳ BDT – Bangladeshi Taka','LKR'=>'₨ LKR – Sri Lankan Rupee',
+                        'NPR'=>'₨ NPR – Nepalese Rupee','MMK'=>'K MMK – Myanmar Kyat','THB'=>'฿ THB – Thai Baht',
+                        'VND'=>'₫ VND – Vietnamese Dong','IDR'=>'Rp IDR – Indonesian Rupiah','MYR'=>'RM MYR – Malaysian Ringgit',
+                        'PHP'=>'₱ PHP – Philippine Peso','KRW'=>'₩ KRW – South Korean Won','TWD'=>'$ TWD – Taiwan Dollar',
+                        'HUF'=>'Ft HUF – Hungarian Forint','CZK'=>'Kč CZK – Czech Koruna','PLN'=>'zł PLN – Polish Zloty',
+                        'RON'=>'lei RON – Romanian Leu','BGN'=>'лв BGN – Bulgarian Lev','HRK'=>'kn HRK – Croatian Kuna',
+                        'RSD'=>'дин RSD – Serbian Dinar','BAM'=>'KM BAM – Bosnia Mark','MKD'=>'ден MKD – Macedonian Denar',
+                        'ALL'=>'L ALL – Albanian Lek','DKK'=>'kr DKK – Danish Krone','SEK'=>'kr SEK – Swedish Krona',
+                        'NOK'=>'kr NOK – Norwegian Krone','ISK'=>'kr ISK – Icelandic Króna','RUB'=>'₽ RUB – Russian Ruble',
+                        'UAH'=>'₴ UAH – Ukrainian Hryvnia','KZT'=>'₸ KZT – Kazakhstani Tenge','GEL'=>'₾ GEL – Georgian Lari',
+                        'AMD'=>'֏ AMD – Armenian Dram','AZN'=>'₼ AZN – Azerbaijani Manat','BYN'=>'Br BYN – Belarusian Ruble',
+                        'MDL'=>'L MDL – Moldovan Leu','UZS'=>'лв UZS – Uzbekistani Som','TJS'=>'SM TJS – Tajikistani Somoni',
+                        'TMT'=>'T TMT – Turkmenistani Manat','KGS'=>'лв KGS – Kyrgyzstani Som','MNT'=>'₮ MNT – Mongolian Tögrög',
+                        'NGN'=>'₦ NGN – Nigerian Naira','ZAR'=>'R ZAR – South African Rand','KES'=>'Ksh KES – Kenyan Shilling',
+                        'GHS'=>'₵ GHS – Ghanaian Cedi','ETB'=>'Br ETB – Ethiopian Birr','TZS'=>'Sh TZS – Tanzanian Shilling',
+                        'UGX'=>'Sh UGX – Ugandan Shilling','RWF'=>'Fr RWF – Rwandan Franc','MAD'=>'د.م. MAD – Moroccan Dirham',
+                        'DZD'=>'دج DZD – Algerian Dinar','TND'=>'د.ت TND – Tunisian Dinar','LYD'=>'ل.د LYD – Libyan Dinar',
+                        'XOF'=>'Fr XOF – West African CFA','XAF'=>'Fr XAF – Central African CFA','ZMW'=>'ZK ZMW – Zambian Kwacha',
+                        'MZN'=>'MT MZN – Mozambican Metical','AOA'=>'Kz AOA – Angolan Kwanza','BWP'=>'P BWP – Botswana Pula',
+                        'NAD'=>'$ NAD – Namibian Dollar','MUR'=>'₨ MUR – Mauritian Rupee','SCR'=>'₨ SCR – Seychellois Rupee',
+                        'MGA'=>'Ar MGA – Malagasy Ariary','ZWL'=>'$ ZWL – Zimbabwean Dollar','CDF'=>'Fr CDF – Congolese Franc',
+                        'SDG'=>'£ SDG – Sudanese Pound','SOS'=>'Sh SOS – Somali Shilling','DJF'=>'Fr DJF – Djiboutian Franc',
+                        'ERN'=>'Nkf ERN – Eritrean Nakfa','GMD'=>'D GMD – Gambian Dalasi','GNF'=>'Fr GNF – Guinean Franc',
+                        'SLL'=>'Le SLL – Sierra Leonean Leone','LRD'=>'$ LRD – Liberian Dollar','CVE'=>'$ CVE – Cape Verdean Escudo',
+                        'STN'=>'Db STN – São Tomé Dobra','KMF'=>'Fr KMF – Comorian Franc','MWK'=>'MK MWK – Malawian Kwacha',
+                        'LSL'=>'L LSL – Lesotho Loti','SZL'=>'L SZL – Swazi Lilangeni','BIF'=>'Fr BIF – Burundian Franc',
+                        'AFN'=>'؋ AFN – Afghan Afghani','MVR'=>'Rf MVR – Maldivian Rufiyaa','BTN'=>'Nu BTN – Bhutanese Ngultrum',
+                        'KHR'=>'៛ KHR – Cambodian Riel','LAK'=>'₭ LAK – Lao Kip','BND'=>'$ BND – Brunei Dollar',
+                        'PGK'=>'K PGK – Papua New Guinea Kina','FJD'=>'$ FJD – Fijian Dollar','SBD'=>'$ SBD – Solomon Islands Dollar',
+                        'VUV'=>'Vt VUV – Vanuatu Vatu','WST'=>'T WST – Samoan Tālā','TOP'=>'T$ TOP – Tongan Paʻanga',
+                        'XPF'=>'Fr XPF – CFP Franc','AWG'=>'ƒ AWG – Aruban Florin','ANG'=>'ƒ ANG – Netherlands Antillean Guilder',
+                        'SRD'=>'$ SRD – Surinamese Dollar','GYD'=>'$ GYD – Guyanese Dollar','HTG'=>'G HTG – Haitian Gourde',
+                        'NIO'=>'C$ NIO – Nicaraguan Córdoba','HNL'=>'L HNL – Honduran Lempira','PAB'=>'B/. PAB – Panamanian Balboa',
+                        'CUP'=>'$ CUP – Cuban Peso','BZD'=>'$ BZD – Belize Dollar','XCD'=>'$ XCD – East Caribbean Dollar',
+                        'KYD'=>'$ KYD – Cayman Islands Dollar','BMD'=>'$ BMD – Bermudian Dollar',
+                    ];
+                    $selectedCurrency = old('currency', $shipment->currency ?? 'USD');
+                    $isOther = $selectedCurrency && !isset($allCurrencies[$selectedCurrency]) && $selectedCurrency !== 'USD';
+                    @endphp
+                    <select name="currency" class="form-select" id="editCurrencySelect">
+                        @foreach($allCurrencies as $code => $label)
+                            <option value="{{ $code }}" {{ (!$isOther && $selectedCurrency === $code) ? 'selected' : '' }}>{{ $label }}</option>
+                        @endforeach
+                        <option value="__other__" {{ $isOther ? 'selected' : '' }}>✏️ Other (type below)…</option>
+                    </select>
+                    <input type="text" id="editCurrencyCustomInput" name="currency_custom"
+                           class="form-control mt-1 font-monospace text-uppercase"
+                           placeholder="e.g. XYZ – My Currency"
+                           value="{{ $isOther ? $selectedCurrency : '' }}"
+                           style="{{ $isOther ? '' : 'display:none;' }}" maxlength="20">
+                    <div class="form-text" id="editCurrencyCustomHelp" style="{{ $isOther ? '' : 'display:none;' }}">Enter a 3-letter code or short label. This will be used as-is.</div>
+                </div>
+
+                <div class="col-md-2">
+                    <label class="form-label">Declared Value</label>
+                    <div class="input-group">
+                        <span class="input-group-text fw-semibold" id="editValueCurrencyPrefix">{{ old('currency', $shipment->currency ?? 'USD') }}</span>
+                        <input name="value" type="text" class="form-control" value="{{ old('value', $shipment->value) }}">
+                    </div>
+                </div>
+
+                <div class="col-md-2">
                     <label class="form-label">Total Freight</label>
-                    <input name="total_freight" type="text" class="form-control" value="{{ old('total_freight', $shipment->total_freight) }}">
+                    <div class="input-group">
+                        <span class="input-group-text fw-semibold" id="editFreightCurrencyPrefix">{{ old('currency', $shipment->currency ?? 'USD') }}</span>
+                        <input name="total_freight" type="text" class="form-control" value="{{ old('total_freight', $shipment->total_freight) }}">
+                    </div>
                 </div>
 
                 <div class="col-12 d-flex gap-2">
@@ -318,4 +395,36 @@
         document.getElementById('imagePreviewWrap').style.display = 'none';
         document.getElementById('imagePlaceholder').style.display = 'flex';
     }
+
+    document.getElementById('editCurrencySelect').addEventListener('change', function () {
+        const code = this.value;
+        const customInput = document.getElementById('editCurrencyCustomInput');
+        const customHelp  = document.getElementById('editCurrencyCustomHelp');
+        if (code === '__other__') {
+            customInput.style.display = 'block';
+            customHelp.style.display  = 'block';
+            customInput.focus();
+        } else {
+            customInput.style.display = 'none';
+            customHelp.style.display  = 'none';
+            customInput.value = '';
+            document.getElementById('editValueCurrencyPrefix').textContent   = code;
+            document.getElementById('editFreightCurrencyPrefix').textContent = code;
+        }
+    });
+    document.getElementById('editCurrencyCustomInput').addEventListener('input', function () {
+        const val = this.value.trim().toUpperCase() || '?';
+        document.getElementById('editValueCurrencyPrefix').textContent   = val;
+        document.getElementById('editFreightCurrencyPrefix').textContent = val;
+    });
+    document.querySelector('form').addEventListener('submit', function () {
+        const sel = document.getElementById('editCurrencySelect');
+        if (sel.value === '__other__') {
+            const custom = document.getElementById('editCurrencyCustomInput').value.trim().toUpperCase();
+            const h = document.createElement('input');
+            h.type = 'hidden'; h.name = 'currency'; h.value = custom || 'USD';
+            this.appendChild(h);
+            sel.disabled = true;
+        }
+    });
 </script>
