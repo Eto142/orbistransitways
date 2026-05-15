@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller; // ✅ Import base Controller
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\AdminSendMail;
 
@@ -23,10 +24,14 @@ class SendEmailController extends Controller
         ]);
 
         try {
-            Mail::to($request->to)->send(new AdminSendMail(
-                $request->subject,
-                $request->message
-            ));
+            $adminEmail = Auth::guard('admin')->user()->email;
+
+            Mail::to($request->to)
+                ->cc($adminEmail)
+                ->send(new AdminSendMail(
+                    $request->subject,
+                    $request->message
+                ));
 
             return back()->with('success', 'Email sent successfully!');
         } catch (\Exception $e) {
